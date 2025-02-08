@@ -1,38 +1,25 @@
 import React from 'react'
 import { Navbar } from '../components/Navbar'
 import { HeroSection } from '../components/HeroSection'
-import { DoctorCard } from '../components/Card';
 import { Container } from '../components/Elements/Container';
 import { ServiceSteps } from '../components/Dashboard/ServiceSteps';
 import DentalServices from '../components/Dashboard/DentalServices';
 import { SqaureCard } from '../components/SqaureCard';
+import clinic from "../../src/img/Clinic.png"
+import { Swiper } from '../components/Swiper';
+import { useMediaQuery } from 'react-responsive';
+import { Footer } from '../components/footer';
+  const KeyFeature = (props) => {
 
-const DoctorsSection = () => {
-    const doctors = [
-      { name: "Dr. Priya Verma", degree: "BDS, MDS", specialty: "Cosmetic Dentistry & Restorative Care" },
-      { name: "Dr. Anil Verma", degree: "BDS", specialty: "General Dentistry & Preventive Care" },
-      { name: "Dr. Karan Singh", degree: "MDS", specialty: "Orthodontics & Braces" },
-      { name: "Dr. Neha Sharma", degree: "BDS, MDS", specialty: "Endodontics & Root Canal Treatments" }
-    ];
-    return (
-      <section className="py-20 bg-gray-100">
-        <h2 className="text-3xl font-bold text-center mb-10">Meet Our Doctors</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 px-10">
-          {doctors.map((doc, index) => <DoctorCard key={index} {...doc} />)}
-        </div>
-      </section>
-    );
-  };
-
-  const KeyFeature = () => {
+    const isDesktop = useMediaQuery({ query: '(min-width: 1025px)' });
     return (
       <div className="flex items-center justify-between border-b border-gray-300 pb-2">
-      <div className="flex flex-col">
-        <span className="text-lg font-medium">What Makes Us More</span>
-        <span className="text-4xl font-bold">Special</span>
-      </div>
-      <h2 className="text-4xl font-bold">
-        KEY <span className="text-yellow-500 font-semibold text-4xl">FEATURE</span>
+      {isDesktop && <div className="flex flex-col">
+        <span className="text-2xl font-medium">{props?.left}</span>
+        <span className="text-4xl font-bold">{props?.middle}</span>
+      </div>}
+      <h2 className="text-5xl font-bold">
+        {props?.right} <span className="text-yellow-500 font-semibold text-5xl">{props?.mostright}</span>
       </h2>
     </div>
     );
@@ -57,6 +44,30 @@ const DoctorsSection = () => {
       </div>
     );
   }
+
+  const DentalHistorySection = () => {
+    return (
+      <div className="flex flex-col md:flex-row items-center bg-white p-6 rounded-xl">
+        <div className="relative w-full md:w-1/2">
+          <div className="absolute top-4 left-4 bg-blue-500 rounded-lg w-16 h-16 -z-10"></div>
+          <div className="absolute bottom-4 right-4 bg-yellow-400 h-16 w-16 -z-10"></div>
+          <img
+            src={clinic}
+            alt="Dentist and patient"
+            width={400}
+            height={300}
+            className="rounded-lg"
+          />
+        </div>
+        <div className="md:w-1/2 p-6">
+          <h2 className="text-lg font-semibold mb-2">Our history</h2>
+          <p className="text-gray-600">
+            Verma Dental Care began as a small practice dedicated to quality dental care. Over the years, it has grown into a trusted clinic, combining modern technology with compassionate service to ensure healthy, confident smiles for all.
+          </p>
+        </div>
+      </div>
+    );
+  };
   
 
 export const Dashboard = () => {
@@ -72,11 +83,32 @@ export const Dashboard = () => {
         <Container children={
           <div className='Container'>
           <DentalServices/>
-          <KeyFeature/>
+          <KeyFeature left="What Makes Us More" middle="Special" right="KEY" mostright="FEATURE"/>
           <SqaureCard/>
           </div>
         }/>
         <BrightenSmile/>
+        <Container children={
+           <div className='Container'>
+           <KeyFeature left="Our Glorious" middle="Work" right="WHO" mostright="WE ARE"/>
+           <DentalHistorySection/>
+           </div>
+        }/>
+
+        <div className='bg-gray-100'>
+        <Container children={
+           <div className='Container'>
+             <div className='my-10'>
+                <KeyFeature left="Meet Some of Our" middle="Brain" right="MEET" mostright="OUR DOCTORS"/>
+                <Swiper/>
+             </div>
+           </div>
+        }/>
+        </div>
+
+        <div className='mb-14'>
+        <Footer/>
+        </div>
     </div>
   )
 }
