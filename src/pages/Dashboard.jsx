@@ -3,6 +3,8 @@ import { Navbar } from '../components/Navbar'
 import { HeroSection } from '../components/HeroSection'
 import { DoctorCard } from '../components/Card';
 import { Container } from '../components/Elements/Container';
+import { ServiceSteps } from '../components/Dashboard/ServiceSteps';
+import DentalServices from '../components/Dashboard/DentalServices';
 
 const DoctorsSection = () => {
     const doctors = [
@@ -21,6 +23,20 @@ const DoctorsSection = () => {
     );
   };
 
+  const KeyFeature = () => {
+    return (
+      <div className="flex items-center justify-between border-b border-gray-300 pb-2">
+      <div className="flex flex-col">
+        <span className="text-lg font-medium">What Makes Us More</span>
+        <span className="text-4xl font-bold">Special</span>
+      </div>
+      <h2 className="text-lg font-bold">
+        KEY <span className="text-yellow-500 font-semibold">FEATURE</span>
+      </h2>
+    </div>
+    );
+  };
+
 export const Dashboard = () => {
   return (
     <div>
@@ -28,8 +44,15 @@ export const Dashboard = () => {
         <Container children={
            <div className='Container'>
            <HeroSection/>
-           <DoctorsSection/>
            </div>
+        }/>
+        <ServiceSteps/>
+        <DentalServices/>
+
+        <Container children={
+          <div className='Container'>
+          <KeyFeature/>
+          </div>
         }/>
     </div>
   )
