@@ -15,7 +15,7 @@ export const DentalServices = () => {
   ];
 
   return (
-    <div className="md:flex-row bg-gray-100 p-5 md:p-10 rounded-xl">
+    <div className="md:flex-row  rounded-xl">
       <div className="flex flex-col md:flex-row p-5">
         <div className="w-full md:w-1/2 mb-4 md:mb-0">
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900">

@@ -5,6 +5,7 @@ import { DoctorCard } from '../components/Card';
 import { Container } from '../components/Elements/Container';
 import { ServiceSteps } from '../components/Dashboard/ServiceSteps';
 import DentalServices from '../components/Dashboard/DentalServices';
+import { SqaureCard } from '../components/SqaureCard';
 
 const DoctorsSection = () => {
     const doctors = [
@@ -30,12 +31,33 @@ const DoctorsSection = () => {
         <span className="text-lg font-medium">What Makes Us More</span>
         <span className="text-4xl font-bold">Special</span>
       </div>
-      <h2 className="text-lg font-bold">
-        KEY <span className="text-yellow-500 font-semibold">FEATURE</span>
+      <h2 className="text-4xl font-bold">
+        KEY <span className="text-yellow-500 font-semibold text-4xl">FEATURE</span>
       </h2>
     </div>
     );
   };
+
+  const BrightenSmile = () => {
+    return (
+      <div className="flex items-center justify-center bg-blue-600 mb-24">
+        <div className="text-center text-white lg:max-w-[65%] sm:w-[90%] p-8 my-6">
+          <h2 className="text-3xl font-semibold">
+            Let Us Brighten <span className="font-bold">Your Smile!</span>
+          </h2>
+          <p className="mt-4 text-lg">
+            Helping patients achieve good dental health & beautiful smile is a privilege & responsibility. 
+            For over 30 years, we proudly provided the best dental experience in New York. 
+            Our comfort-first approach is designed to meet the needs of you & your entire family.
+          </p>
+          <button className="mt-6 px-6 py-3 border border-white rounded-lg text-white hover:bg-white hover:text-blue-600 transition">
+            Make An Appointment
+          </button>
+        </div>
+      </div>
+    );
+  }
+  
 
 export const Dashboard = () => {
   return (
@@ -47,13 +69,14 @@ export const Dashboard = () => {
            </div>
         }/>
         <ServiceSteps/>
-        <DentalServices/>
-
         <Container children={
           <div className='Container'>
+          <DentalServices/>
           <KeyFeature/>
+          <SqaureCard/>
           </div>
         }/>
+        <BrightenSmile/>
     </div>
   )
 }
