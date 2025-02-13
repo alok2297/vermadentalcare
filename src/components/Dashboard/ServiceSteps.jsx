@@ -3,30 +3,24 @@ import { Iconify } from "../Elements/Icon";
 
 export const ServiceSteps = () => {
   return (
-    <div className="bg-blue-600 gap-10 text-white py-10 px-5 flex flex-col md:flex-row items-center justify-center">
-      <div className=" flex flex-col justify-center items-center text-center md:text-left px-6">
-        <h2 className="text-4xl font-semibold">How to get our service?</h2>
-        <p className="text-xl mt-2">Just follow these simple steps</p>
+    <div className="bg-blue-600 text-white py-8 px-4 flex flex-col items-center">
+      <div className="text-center mb-6">
+        <h2 className="text-3xl font-semibold">How to get our service?</h2>
+        <p className="text-lg mt-2">Just follow these simple steps</p>
       </div>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-6 md:mt-0">
-        <div className="bg-white text-black p-6 rounded-2xl shadow-lg flex flex-col items-center w-54 text-center">
-          <div className="bg-gray-200 p-4 rounded-full mb-3">
-            <Iconify icon = "mdi-light:phone"/>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-screen-md">
+        {[
+          { icon: "mdi-light:phone", text: "Call for appointment" },
+          { icon: "lets-icons:date-fill", text: "Get a Date & Serial" },
+          { icon: "icon-park-outline:add", text: "Consult Your Dentist" },
+        ].map((step, index) => (
+          <div key={index} className="bg-white text-black p-4 rounded-xl shadow-md flex flex-col items-center w-full max-w-[250px] mx-auto">
+            <div className="bg-gray-200 p-3 rounded-full mb-3">
+              <Iconify icon={step.icon} />
+            </div>
+            <p className="text-lg">{step.text}</p>
           </div>
-          <p className="font-xl">Call for appointment</p>
-        </div>
-        <div className="bg-white text-black p-6 rounded-2xl shadow-lg flex flex-col items-center w-48 text-center">
-          <div className="bg-gray-200 p-4 rounded-full mb-3">
-            <Iconify icon = "lets-icons:date-fill"/>
-          </div>
-          <p className="font-xl">Get a Date & Serial</p>
-        </div>
-        <div className="bg-white text-black p-6 rounded-2xl shadow-lg flex flex-col items-center w-48 text-center">
-          <div className="bg-gray-200 p-4 rounded-full mb-3">
-            <Iconify icon = "icon-park-outline:add"/>
-          </div>
-          <p className="font-xl">Consult Your Dentist</p>
-        </div>
+        ))}
       </div>
     </div>
   );

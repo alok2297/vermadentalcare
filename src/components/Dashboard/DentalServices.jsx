@@ -1,5 +1,5 @@
 import React from 'react'
-import doc from "../../img/dental3.png"
+import doc from "../../img/smile3.png"
 import { Iconify } from '../Elements/Icon';
 
 export const DentalServices = () => {
@@ -39,7 +39,7 @@ export const DentalServices = () => {
           <img
             src={doc}
             alt="Doctor illustration"
-            className="w-40 h-40 md:w-[300px] md:h-[300px] object-cover mb-4 md:mb-0"
+            className="w-48 h-40 md:w-[400px] sm:w-[420px] md:h-[300px] object-cover mb-4 md:mb-0"
           />
         </div>
         <div className="w-full md:w-1/2">

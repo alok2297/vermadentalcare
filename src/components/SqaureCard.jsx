@@ -5,6 +5,11 @@ import implant_icon from "../../src/img/implant.png";
 import painfull_injection_icon from "../../src/img/injection.png";
 import scanner_icon from "../../src/img/scanner.png";
 import digital_smile_icon from "../../src/img/digitalsmile.png";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 const services = [
   {
     title: "Laser Technology",

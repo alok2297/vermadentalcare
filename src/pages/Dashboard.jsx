@@ -9,25 +9,31 @@ import clinic from "../../src/img/Clinic.png"
 import { Swiper } from '../components/Swiper';
 import { useMediaQuery } from 'react-responsive';
 import { Footer } from '../components/footer';
+import { Chatbot } from '../components/Chatbot/Chatbot';
   const KeyFeature = (props) => {
 
     const isDesktop = useMediaQuery({ query: '(min-width: 1025px)' });
     return (
-      <div className="flex items-center justify-between border-b border-gray-300 pb-2">
-      {isDesktop && <div className="flex flex-col">
-        <span className="text-2xl font-medium">{props?.left}</span>
-        <span className="text-4xl font-bold">{props?.middle}</span>
-      </div>}
-      <h2 className="text-5xl font-bold">
-        {props?.right} <span className="text-yellow-500 font-semibold text-5xl">{props?.mostright}</span>
-      </h2>
-    </div>
+      <div className="mt-5 flex items-center justify-between border-b border-gray-300 pb-2">
+        {isDesktop && (
+          <div className="flex flex-col">
+            <span className="text-2xl font-medium">{props?.left}</span>
+            <span className="text-4xl font-bold">{props?.middle}</span>
+          </div>
+        )}
+        <h2 className="px-4 text-3xl sm:text-5xl font-bold">
+          {props?.right}{" "}
+          <span className="text-yellow-500 font-semibold text-3xl sm:text-5xl">
+            {props?.mostright}
+          </span>
+        </h2>
+      </div>
     );
   };
 
   const BrightenSmile = () => {
     return (
-      <div className="flex items-center justify-center bg-blue-600 mb-24">
+      <div className="flex items-center justify-center bg-blue-600">
         <div className="text-center text-white lg:max-w-[65%] sm:w-[90%] p-8 my-6">
           <h2 className="text-3xl font-semibold">
             Let Us Brighten <span className="font-bold">Your Smile!</span>
@@ -109,6 +115,8 @@ export const Dashboard = () => {
         <div className='mb-14'>
         <Footer/>
         </div>
+        {/* Add the Chatbot to your Dashboard */}
+      <Chatbot/>
     </div>
   )
 }

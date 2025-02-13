@@ -4,7 +4,6 @@ export const Footer = () => {
   return (
     <footer className="py-5 px-6 text-gray-700 text-center md:text-left">
       <div className="max-w-6xl mx-auto">
-        {/* Logo Section */}
         <div className="flex flex-col items-center mb-6">
           <img
             src={logo} // Replace with actual logo path
@@ -19,9 +18,9 @@ export const Footer = () => {
             <input
               type="email"
               placeholder="Input your email"
-              className="flex-1 outline-none bg-transparent"
+              className="flex-1 outline-none bg-transparent text-sm"
             />
-            <button className="bg-blue-500 text-white px-4 py-2">
+            <button className="bg-blue-500 text-white px-4 py-2 min-w-[80px] sm:min-w-[100px] whitespace-nowrap">
               Subscribe
             </button>
           </div>
