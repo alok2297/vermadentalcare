@@ -2,8 +2,9 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa"
 import logo from "../img/vermadentalcarelogo.png"
 export const Footer = () => {
   return (
-    <footer className="py-5 px-6 text-gray-700 text-center md:text-left">
+    <footer className="py-5 px-6 text-gray-700 bg-[#ffffff] text-center md:text-left">
       <div className="max-w-6xl mx-auto">
+      <div className="border-b border-gray-300"></div>
         <div className="flex flex-col items-center mb-6">
           <img
             src={logo} // Replace with actual logo path

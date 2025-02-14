@@ -1,10 +1,13 @@
-import React from 'react'
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import { Dashboard } from '../pages/Dashboard';
 import { Appointment } from '../components/Appointment/Appointment';
 import { Login } from '../components/Login';
+import { useStorage } from './useStorage';
+import { LoginPage } from '../pages/LoginPage';
 export const Routers = () => {
-
+  const hasTokenValue = useStorage("token");
+  const [hasToken, setHasToken] = useState(false);
   const routesList = [
     {
       path:"/",
@@ -20,15 +23,30 @@ export const Routers = () => {
     },
     {
       path:"/login",
-      element:<Login/>,
+      element:<LoginPage/>,
       children:[],
       requireToken:false,
     }
   ];
 
+  useEffect(() => {
+    if (hasTokenValue && hasTokenValue !== "") {
+      setHasToken(true);
+    } else {
+      setHasToken(false);
+    }
+  }, [hasTokenValue]);
+
+  const PrivateRoute = ({ element }) => {
+    const hasTokenValue = useStorage("token"); 
+    return hasTokenValue&&element.requireToken ? element : <Navigate replace to="/login" />;
+  };
+
   function getRoute(routesList) {
     return routesList.map((route,index) => (
-      <Route key={index} path={route.path} element={route.element}>
+      <Route key={index} path={route.path} element={
+        route.requireToken ? <PrivateRoute element={route.element} /> : route.element
+      }>
         {route.children && getRoute(route.children)}
       </Route> 
     ))
