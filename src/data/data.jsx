@@ -2,6 +2,13 @@ import alignment from "../img/allignment.jpg";
 import brightsmile from "../img/brightsmile.jpg";
 import generalcare from "../img/generalcare.jpg";
 import profile from "../img/doc_profile.png";
+export const texts = [
+  { main: "We Provide High Quality", highlight: "Dental", end: "Services" },
+  { main: "Expert Dental Care", highlight: "for a", end: "Healthier Smile" },
+  { main: "Your Trusted", highlight: "Oral", end: "Care Experts" },
+  { main: "Advanced & Painless", highlight: "Dental", end: "Treatments" },
+  { main: "Bringing Confidence", highlight: "to Your", end: "Smile" }
+];
 export const dentalServices = [
     {
       title: "General Care",

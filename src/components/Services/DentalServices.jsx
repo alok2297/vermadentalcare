@@ -4,7 +4,7 @@ import { Card, CardContent, CardMedia, Grid, Typography, useMediaQuery } from "@
 export const DentalServices = ({data,orientation}) => {
   const isSmallScreen = useMediaQuery("(max-width:600px)"); // Check if screen width is ≤ 600px
   return (
-    <div className="py-10 px-8">
+    <div className="py-10 ">
       <Grid container spacing={2} justifyContent="center">
         {data.map((service, index) => (
           <Grid item xs={12} md={4} key={index}>

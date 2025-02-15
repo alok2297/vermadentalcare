@@ -50,7 +50,7 @@ export const Navbar = () => {
           }
         </ul>
       )}
-      {lastSegment!=="login" && <div className="border-b border-gray-300 mx-10 md:mx-[82px]"></div>}
+      {lastSegment!=="login" && <div className="border-b border-gray-300 mx-4 md:mx-[82px]"></div>}
     </div>
   );
 };
