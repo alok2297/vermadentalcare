@@ -5,11 +5,12 @@ import { Container } from '../components/Elements/Container';
 import { ServiceSteps } from '../components/Dashboard/ServiceSteps';
 import DentalServices from '../components/Dashboard/DentalServices';
 import { SqaureCard } from '../components/SqaureCard';
+import {Swiper} from "../components/Swiper";
 import clinic from "../../src/img/Clinic.png"
-import { Swiper } from '../components/Swiper';
 import { useMediaQuery } from 'react-responsive';
 import { Footer } from '../components/footer';
 import { Chatbot } from '../components/Chatbot/Chatbot';
+import { DoctorSection } from '../components/Doctor/DoctorSection';
   const KeyFeature = (props) => {
 
     const isDesktop = useMediaQuery({ query: '(min-width: 1025px)' });
@@ -106,7 +107,7 @@ export const Dashboard = () => {
            <div className='Container'>
              <div className='my-10'>
                 <KeyFeature left="Meet Some of Our" middle="Brain" right="MEET" mostright="OUR DOCTORS"/>
-                <Swiper/>
+                <DoctorSection/>
              </div>
            </div>
         }/>

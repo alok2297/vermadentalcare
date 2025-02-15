@@ -6,9 +6,9 @@ export function LastSegment(){
 
 export const navbarItems = [
     { to: '/', label: 'Home' },
+    { to: '/services', label: 'Services' },
     { to: '/dentistry', label: 'Dentistry' },
     { to: '/about', label: 'About Us' },
-    { to: '/services', label: 'Services' },
     { to: '/contact', label: 'Contact' },
     {to: '/login', label: 'Login/Signup'}
   ];

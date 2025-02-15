@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { FaCommentDots } from 'react-icons/fa'; // Import a chat icon
-import dentistImage from '../../img/smile2.png'; // Add an appropriate image path
 
 export const Chatbot = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
