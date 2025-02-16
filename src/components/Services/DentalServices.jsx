@@ -6,7 +6,6 @@ import "swiper/css";
 export const DentalServices = ({ data, orientation, cardHeightSmall,cardHeightBig }) => {
   const isSmallScreen = useMediaQuery("(max-width:600px)");
   const finalHeight = isSmallScreen ? (cardHeightBig || 250) : (cardHeightSmall || 300); 
-
   return (
     <Swiper
       spaceBetween={10}
@@ -66,9 +65,10 @@ export const DentalServices = ({ data, orientation, cardHeightSmall,cardHeightBi
               >
                 {service.description}
               </Typography>
-              <Typography variant="subtitle2" fontFamily="serif" color="primary" sx={{ mt: 1 }}>
+              <Typography variant="subtitle2" className="cursor-pointer" fontFamily="serif" color="primary" sx={{ mt: 1 }}>
                 {service.category}
               </Typography>
+              {/* <button className="p-2 mt-1 border bg-gray-100 shadow-sm rounded-sm">Appointment</button> */}
             </CardContent>
           </Card>
         </SwiperSlide>

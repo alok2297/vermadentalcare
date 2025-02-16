@@ -117,6 +117,17 @@ const DentalCare = () => {
           </motion.div>
         </AnimatePresence>
       )}
+
+      {isDesktop&&<div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {servicedata.map((_, index) => (
+          <div
+            key={index}
+            className={`w-3 h-3 rounded-full transition ${
+              currentIndex === index ? "bg-blue-500" : "bg-gray-300"
+            }`}
+          />
+        ))}
+      </div>}
     </div>
   );
 };

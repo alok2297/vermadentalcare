@@ -7,6 +7,7 @@ import { useStorage } from './useStorage';
 import { LoginPage } from '../pages/LoginPage';
 import { DentalServices } from '../components/Services/DentalServices';
 import { Services } from '../pages/Services';
+import { ContactUs } from '../pages/Contactus';
 export const Routers = () => {
   const hasTokenValue = useStorage("token");
   const [hasToken, setHasToken] = useState(false);
@@ -32,6 +33,12 @@ export const Routers = () => {
     {
       path:"/services",
       element:<Services/>,
+      children:[],
+      requireToken:false,
+    },
+    {
+      path:"/contact",
+      element:<ContactUs/>,
       children:[],
       requireToken:false,
     }
