@@ -11,7 +11,7 @@ import { useMediaQuery } from 'react-responsive';
 import { Footer } from '../components/footer';
 import { Chatbot } from '../components/Chatbot/Chatbot';
 import { DoctorSection } from '../components/Doctor/DoctorSection';
-  const KeyFeature = (props) => {
+  export const KeyFeature = (props) => {
 
     const isDesktop = useMediaQuery({ query: '(min-width: 1025px)' });
     return (
@@ -22,7 +22,7 @@ import { DoctorSection } from '../components/Doctor/DoctorSection';
             <span className="text-4xl font-bold">{props?.middle}</span>
           </div>
         )}
-        <h2 className="px-4 text-3xl sm:text-5xl font-bold">
+        <h2 className="px-2 text-3xl sm:text-5xl font-bold">
           {props?.right}{" "}
           <span className="text-yellow-500 font-semibold text-3xl sm:text-5xl">
             {props?.mostright}
