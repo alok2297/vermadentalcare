@@ -1,20 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import hero1 from "../img/hero1.png"
-import hero2 from "../img/hero2.png"
-import hero3 from "../img/hero3.png"
-import hero4 from "../img/hero4.png"
-import hero5 from "../img/hero5.png"
-import { useMediaQuery } from 'react-responsive';
+import hero2 from "../img/HeroImage.png"
 import { motion, AnimatePresence } from 'framer-motion';
 import {texts} from "../data/data"
 export const HeroSection = () => {
   const [index, setIndex] = useState(0);
-  const isDesktop = useMediaQuery({ query: '(min-width: 1025px)' });
-  const imags = [hero1,hero2,hero3,hero4,hero5];
   useEffect(()=>{
     const interval = setInterval(()=>{
       setIndex((prevIndex)=>(prevIndex+1)%texts.length);
-      setIndex((prevIndex)=>(prevIndex+1)%imags.length);
     },5000)
 
     return ()=> clearInterval(interval);
@@ -52,43 +44,10 @@ export const HeroSection = () => {
 
       <div className="relative mt-4 md:mt-0 flex justify-center">
         <div className="relative w-60 md:w-96 h-60 md:h-96">
-          <AnimatePresence mode="wait">
-            <motion.img
-              key={index}
-              src={imags[index]}
+              <img src={hero2}
               alt="Dentist Illustration"
-              className="w-full h-full object-contain"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.6, ease: "easeInOut" }}
-            />
-          </AnimatePresence>
+              className="w-full h-full object-contain"/>
         </div>
-
-        {index === 0 && (
-          <>
-            {isDesktop && (
-              <div className="absolute top-4 left-2 md:top-10 md:left-[-70px] bg-white shadow-md p-2 md:p-3 rounded-md text-center">
-                <p className="text-gray-900 text-sm md:text-base font-semibold">
-                  500+ Happy Customers
-                </p>
-              </div>
-            )}
-            {isDesktop && (
-              <div className="absolute top-20 right-2 md:top-28 md:right-[-70px] bg-white shadow-md p-2 md:p-3 rounded-md text-center">
-                <p className="text-gray-900 text-sm md:text-base font-semibold">
-                  2000+ Teeth Got Fixed
-                </p>
-              </div>
-            )}
-            {isDesktop && (
-              <div className="absolute bottom-4 left-4 md:bottom-10 md:left-[-60px] bg-yellow-400 text-white px-3 md:px-4 py-1 md:py-2 rounded-md text-center">
-                <p className="text-sm md:text-base">20+ Expert Dentists</p>
-              </div>
-            )}
-          </>
-        )}
       </div>
     </section>
   );

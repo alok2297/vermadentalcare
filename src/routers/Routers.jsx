@@ -8,6 +8,8 @@ import { LoginPage } from '../pages/LoginPage';
 import { DentalServices } from '../components/Services/DentalServices';
 import { Services } from '../pages/Services';
 import { ContactUs } from '../pages/Contactus';
+import { Aboutus } from '../pages/Aboutus';
+import { Dentistry } from '../pages/Dentistry';
 export const Routers = () => {
   const hasTokenValue = useStorage("token");
   const [hasToken, setHasToken] = useState(false);
@@ -39,6 +41,18 @@ export const Routers = () => {
     {
       path:"/contact",
       element:<ContactUs/>,
+      children:[],
+      requireToken:false,
+    },
+    {
+      path:"/about",
+      element:<Aboutus/>,
+      children:[],
+      requireToken:false,
+    },
+    {
+      path:"/dentistry",
+      element:<Dentistry/>,
       children:[],
       requireToken:false,
     }
