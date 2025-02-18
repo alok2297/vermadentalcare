@@ -16,12 +16,12 @@ const DentalCare = () => {
   const isDesktop = useMediaQuery({ query: '(min-width: 1025px)' });
   return (
     <div
-      className="w-full py-4 lg:py-16 bg relative"
-      style={{
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="w-full py-4 lg:py-16 bg relative bg-[#B0C4D8] "
+      // style={{
+      //   backgroundImage: `url(${background})`,
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      // }}
     >
       <div className="max-w-7xl mx-auto sm:px-2 lg:px-12">
         <Swiper
@@ -40,17 +40,17 @@ const DentalCare = () => {
                   <div className="flex flex-col lg:flex-row items-center justify-between">
                     {/* Left Section - Text Content */}
                     <div className="lg:w-1/3 text-white text-center lg:text-left">
-                      <h2 className="text-3xl font-bold text-yellow-400">
+                      <h2 className="text-3xl font-bold text-black">
                         {service.title}
                       </h2>
-                      <p className="mt-2 text-gray-200">
+                      <p className="mt-2 text-black/80">
                         {service.description}
                       </p>
                       <ul className="mt-4 space-y-2">
                         {service.points.map((point, i) => (
                           <li
                             key={i}
-                            className="flex items-center justify-center lg:justify-start text-gray-300"
+                            className="flex items-center justify-center lg:justify-start text-black/80"
                           >
                             <span className="mr-2 text-yellow-400">
                               &#10145;
@@ -63,13 +63,13 @@ const DentalCare = () => {
 
                     {/* Center Section - Middle Content */}
                     <div className="lg:w-1/3 text-center">
-                      <h1 className="text-4xl font-bold text-white">
+                      <h1 className="text-4xl font-bold text-black">
                         {service.middle[0]}
                       </h1>
-                      <p className="text-lg text-gray-300 mt-2">
+                      <p className="text-lg text-black/80 mt-2">
                         {service.middle[1]}
                       </p>
-                      <button className="mt-4 bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-yellow-500 transition">
+                      <button className="mt-4 bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-blue-600 transition">
                         {service.middle[2]}
                       </button>
                     </div>
@@ -84,13 +84,13 @@ const DentalCare = () => {
                     </div>
                   </div>
                 </>:<div className="text-center">
-                      <h1 className="text-2xl font-bold text-white">
+                      <h1 className="text-2xl font-bold text-black">
                         {service.middle[0]}
                       </h1>
-                      <p className="text-[14px] text-gray-300">
+                      <p className="text-[14px] text-black/80">
                         {service.middle[1]}
                       </p>
-                      <button className="mt-2 bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-yellow-500 transition">
+                      <button className="mt-2 bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-blue-600 transition">
                         {service.middle[2]}
                       </button>
                     </div>

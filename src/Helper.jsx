@@ -9,6 +9,6 @@ export const navbarItems = [
     { to: '/services', label: 'Services' },
     { to: '/dentistry', label: 'Dentistry' },
     { to: '/about', label: 'About Us' },
-    { to: '/contact', label: 'Contact' },
+    { to: '/contact', label: 'Appointments' },
     {to: '/login', label: 'Login/Signup'}
-  ];
+];
