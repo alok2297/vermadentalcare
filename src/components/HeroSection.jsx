@@ -43,7 +43,7 @@ export const HeroSection = () => {
       </div>
 
       <div className="relative mt-4 md:mt-0 flex justify-center">
-        <div className="relative w-60 md:w-96 h-60 md:h-96">
+        <div className="relative w-60 md:w-80 h-60 md:h-80">
               <img src={hero2}
               alt="Dentist Illustration"
               className="w-full h-full object-contain"/>

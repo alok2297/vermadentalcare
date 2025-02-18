@@ -36,22 +36,6 @@ const EducationSection = () => {
     return (
       <section id="education" style={{ backgroundColor: "#f9fafb" }}>
         <Box sx={{ maxWidth: "1200px", margin: "0 auto", padding: 3 }}>
-          {/* <Typography
-            variant="h4"
-            align="center"
-            gutterBottom
-            sx={{
-              fontSize: {
-                xs:"16px",
-                sm: "12px", 
-                md: "28px", 
-                lg: "32px", 
-              },
-            }}
-          >
-            Explore Our Educational Resources
-          </Typography> */}
-
           <TextField
             label="Search"
             variant="outlined"
@@ -63,7 +47,7 @@ const EducationSection = () => {
           <Grid container spacing={4} justifyContent="center">
             {/* Educational Videos */}
             <Grid item xs={12} md={6}>
-              <Typography variant="h5" gutterBottom>
+              <Typography variant="h5" gutterBottom sx={{ color: "#374151" }}>
                 Educational Videos
               </Typography>
               <Grid container spacing={2}>
@@ -74,13 +58,13 @@ const EducationSection = () => {
                         sx={{
                           display: "flex",
                           flexDirection: "column",
-                          height: "300px",
+                          height: "325px",
                         }}
                       >
                         <CardMedia
                           component="img"
                           height="140"
-                          image={video.image} 
+                          image={video.image}
                           alt={video.title}
                         />
                         <CardContent sx={{ flexGrow: 1 }}>
@@ -97,19 +81,19 @@ const EducationSection = () => {
                           color="primary"
                           href={video.link}
                           sx={{
-                            marginTop: "auto", 
+                            marginTop: "auto",
                             marginBottom: "10px",
                             marginLeft: "10px",
                             marginRight: "10px",
-                            border: "1px solid #1976d2", 
-                            borderRadius: "4px", 
-                            padding: "6px 12px", 
-                            backgroundColor: "transparent", 
+                            border: "1px solid #1976d2",
+                            borderRadius: "4px",
+                            padding: "6px 12px",
+                            backgroundColor: "transparent",
                             color: "#1976d2",
                             ":hover": {
-                              borderColor: "#1565c0", 
-                              backgroundColor: "#1976d2", 
-                              color: "white", 
+                              borderColor: "#1565c0",
+                              backgroundColor: "#1976d2",
+                              color: "white",
                             },
                           }}
                         >
@@ -125,7 +109,7 @@ const EducationSection = () => {
             </Grid>
 
             <Grid item xs={12} md={6}>
-              <Typography variant="h5" gutterBottom>
+            <Typography variant="h5" gutterBottom sx={{ color: "#374151" }}>
                 Blogs
               </Typography>
               <Grid container spacing={2}>
@@ -136,13 +120,13 @@ const EducationSection = () => {
                         sx={{
                           display: "flex",
                           flexDirection: "column",
-                          height: "300px",
+                          height: "325px",
                         }}
                       >
                         <CardMedia
                           component="img"
                           height="140"
-                          image={blog.image} 
+                          image={blog.image}
                           alt={blog.title}
                         />
                         <CardContent sx={{ flexGrow: 1 }}>
