@@ -1,6 +1,10 @@
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import logo from "../img/vermadentalcarelogo.png"
+import { Link } from "react-router-dom";
 export const Footer = () => {
+  // useEffect(()=>{
+  //   e.preventDefault();
+  // },[])
   return (
     <footer className="py-5 px-6 text-gray-700 bg-[#ffffff] text-center md:text-left">
       <div className="max-w-6xl mx-auto">
@@ -46,8 +50,8 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold">Company</h4>
             <ul className="mt-2 space-y-1">
-              <li>About us</li>
-              <li>Contact us</li>
+              <li><Link to="/about">About us</Link></li>
+              <li><Link to="/contact">Contact us</Link></li>
             </ul>
           </div>
           <div>

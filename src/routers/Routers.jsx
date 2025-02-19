@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import { Dashboard } from '../pages/Dashboard';
 import { Appointment } from '../components/Appointment/Appointment';
-import { Login } from '../components/Login';
 import { useStorage } from './useStorage';
 import { LoginPage } from '../pages/LoginPage';
-import { DentalServices } from '../components/Services/DentalServices';
 import { Services } from '../pages/Services';
 import { ContactUs } from '../pages/Contactus';
 import { Aboutus } from '../pages/Aboutus';
 import { Dentistry } from '../pages/Dentistry';
+import { ScrollToTop } from '../Helper';
+import { MyAppointments } from '../pages/MyAppointments';
 export const Routers = () => {
   const hasTokenValue = useStorage("token");
   const [hasToken, setHasToken] = useState(false);
@@ -29,6 +29,12 @@ export const Routers = () => {
     {
       path:"/login",
       element:<LoginPage/>,
+      children:[],
+      requireToken:false,
+    },
+    {
+      path:"/myappointment",
+      element:<MyAppointments/>,
       children:[],
       requireToken:false,
     },
@@ -82,7 +88,8 @@ export const Routers = () => {
   }
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>{getRoute(routesList)}</Routes>
     </BrowserRouter>
-  )
+  );
 }

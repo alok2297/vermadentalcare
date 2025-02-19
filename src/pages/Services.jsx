@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { DentalServices } from '../components/Services/DentalServices';
 import { Navbar } from '../components/Navbar';
 import { Container } from '../components/Elements/Container';
@@ -6,104 +6,107 @@ import { dentalServices } from '../data/data';
 import {servicedata} from "../data/data";
 import { useMediaQuery } from 'react-responsive';
 import { KeyFeature } from './Dashboard';
+import img from "../img/HeroImage.png"
 import { Footer } from '../components/footer';
 import background from "../img/backgroundd.jpg";
 import { Autoplay, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const DentalCare = () => {
+  const isDesktop = useMediaQuery({ query: "(min-width: 1025px)" });
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const isDesktop = useMediaQuery({ query: '(min-width: 1025px)' });
+  useEffect(() => {
+    if (!isDesktop) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) =>
+          prevIndex === servicedata.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 5000); // Auto change text every 3s in mobile view
+
+      return () => clearInterval(interval);
+    }
+  }, [isDesktop, servicedata.length]);
   return (
-    <div
-      className="w-full py-4 lg:py-16 bg relative bg-[#B0C4D8] "
-      // style={{
-      //   backgroundImage: `url(${background})`,
-      //   backgroundSize: "cover",
-      //   backgroundPosition: "center",
-      // }}
-    >
-      <div className="max-w-7xl mx-auto sm:px-2 lg:px-12">
-        <Swiper
-          modules={[Autoplay, Navigation]}
-          spaceBetween={50}
-          slidesPerView={1}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          pagination={{ clickable: true }}
-          navigation
-          className="w-full"
-        >
-          {servicedata.map((service, index) => (
-            <SwiperSlide key={index}>
-              {
-                isDesktop ? <>
-                  <div className="flex flex-col lg:flex-row items-center justify-between">
-                    {/* Left Section - Text Content */}
-                    <div className="lg:w-1/3 text-white text-center lg:text-left">
-                      <h2 className="text-3xl font-bold text-black">
-                        {service.title}
-                      </h2>
-                      <p className="mt-2 text-black/80">
-                        {service.description}
-                      </p>
-                      <ul className="mt-4 space-y-2">
-                        {service.points.map((point, i) => (
-                          <li
-                            key={i}
-                            className="flex items-center justify-center lg:justify-start text-black/80"
-                          >
-                            <span className="mr-2 text-yellow-400">
-                              &#10145;
-                            </span>{" "}
-                            {point}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Center Section - Middle Content */}
-                    <div className="lg:w-1/3 text-center">
-                      <h1 className="text-4xl font-bold text-black">
-                        {service.middle[0]}
-                      </h1>
-                      <p className="text-lg text-black/80 mt-2">
-                        {service.middle[1]}
-                      </p>
-                      <button className="mt-4 bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-blue-600 transition">
-                        {service.middle[2]}
-                      </button>
-                    </div>
-
-                    {/* Right Section - Image */}
-                    <div className="lg:w-1/3 flex justify-center">
+    <div className="w-full lg:py-16 bg relative bg-white shadow-none lg:shadow-[0_4px_10px_rgba(0,0,0,0.1)]">
+      <div className="sm:px-2 lg:px-12">
+        {isDesktop ? (
+          // **Desktop View with Swiper**
+          <Swiper
+            modules={[Autoplay, Navigation]}
+            spaceBetween={50}
+            slidesPerView={1}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            pagination={{ clickable: true }}
+            navigation
+            className="w-full"
+          >
+            {servicedata.map((service, index) => (
+              <SwiperSlide key={index}>
+                <div className="flex flex-col lg:flex-row items-center justify-center relative">
+                  <div className="max-1/2 text-center md:text-left space-y-2">
+                    <h3 className="text-3xl font-bold text-blue-600">
+                      Dental Services
+                    </h3>
+                    <h1 className="text-3xl md:text-5xl font-bold text-gray-900">
+                      {service.title}
+                    </h1>
+                    <p className="text-gray-600 text-lg md:text-xl font-serif">
+                      {service.description}
+                    </p>
+                    <button className="bg-blue-600 text-white px-5 py-2 rounded-lg w-full md:w-auto">
+                      Book Appointment
+                    </button>
+                  </div>
+                  <div className="lg:w-1/2 flex justify-center">
+                    <div className="relative mt-10 md:mt-0">
                       <img
-                        src={service.img}
-                        alt={service.title}
-                        className="w-64 h-auto rounded-lg"
+                        src={img}
+                        alt="Dentist Illustration"
+                        className="w-80 md:w-64"
                       />
+                      <div className="absolute top-1 left-[-140px] bg-white shadow-md p-2 rounded-md">
+                        <p className="text-gray-900 font-semibold">
+                          500+ Happy Customers
+                        </p>
+                      </div>
+                      <div className="absolute top-20 right-[-135px] bg-yellow-400 text-white shadow-md p-2 rounded-md">
+                        <p className="text-gray-900 font-semibold">
+                          2000+ Teeth Fixed
+                        </p>
+                      </div>
+                      <div className="absolute bottom-1 left-[-140px] bg-white p-2 shadow-md rounded-md text-gray-900 font-semibold">
+                        20+ Expert Dentists
+                      </div>
                     </div>
                   </div>
-                </>:<div className="text-center">
-                      <h1 className="text-2xl font-bold text-black">
-                        {service.middle[0]}
-                      </h1>
-                      <p className="text-[14px] text-black/80">
-                        {service.middle[1]}
-                      </p>
-                      <button className="mt-2 bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-blue-600 transition">
-                        {service.middle[2]}
-                      </button>
-                    </div>
-              }
-            </SwiperSlide>
-          ))}
-        </Swiper>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        ) : (
+          // **Mobile View with Animated Text Changes**
+          <section className="flex flex-col items-center justify-center text-center  bg-white">
+            <KeyFeature right="Dental" mostright="Services" />
+            <h1
+              key={currentIndex}
+              className="text-2xl mt-2 font-bold text-blue-600 "
+            >
+              {servicedata[currentIndex].title}
+            </h1>
+            <p className="text-gray-600 text-lg font-serif mt-2">
+              {servicedata[currentIndex].description}
+            </p>
+            <button className="bg-blue-600 text-white px-5 py-2 rounded-lg mt-4">
+              Book Appointment
+            </button>
+            <img src={img} alt="Dentist Illustration" className="w-60 mt-6" />
+          </section>
+        )}
       </div>
     </div>
   );
 };
-
-
 
 export const Services = () => {
 

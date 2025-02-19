@@ -5,54 +5,25 @@ import profile from "../img/doc_profile.png";
 import img from "../img/HeroImage.png";
 export const servicedata = [
   {
-    title: 'Our Services',
-    description: 'We provide top-notch dental services to keep your smile healthy and bright.',
-    points: [
-      'General Care',
-      'Perfect Alignment',
-      'Braces',
-      'Veneers',
-    ],
-    middle: ["Verma Dental Care", "Your Smile, Our Priority!", "Book Your Appointment"],
+    title: "Root Canal Treatment",
+    description: "Painless and effective treatment to save your natural tooth.",
+    middle: ["Expert Dental Care", "Ensuring Healthy & Beautiful Smiles"],
     img: img,
   },
   {
-    title: 'About Us',
-    description: 'At Verma Dental Care, we believe in providing the best dental solutions with cutting-edge technology and expert care.',
-    points: [
-      'Experienced Professionals',
-      'State-of-the-Art Equipment',
-      'Personalized Treatment Plans',
-      'Comfortable Environment',
-    ],
-    middle: ["Verma Dental Care", "Bringing Healthy Smiles!", "Meet Our Experts"],
+    title: "Teeth Whitening",
+    description: "Brighten your smile with professional whitening treatments.",
+    middle: ["Brighter Smiles", "Get Rid of Stains & Discoloration"],
     img: img,
   },
   {
-    title: 'Why Choose Us',
-    description: 'We are committed to providing high-quality dental care with a focus on patient satisfaction and comfort.',
-    points: [
-      'Painless Procedures',
-      'Affordable Pricing',
-      'Advanced Technology',
-      'Patient-Centered Approach',
-    ],
-    middle: ["Verma Dental Care", "Your Comfort, Our Priority!", "Get Started Today"],
+    title: "Dental Implants",
+    description: "Permanent solutions for missing teeth with high durability.",
+    middle: ["Restore Confidence", "Natural-Looking & Long-Lasting"],
     img: img,
   },
-  {
-    title: 'Contact Us',
-    description: 'Have questions or need an appointment? Reach out to us and our team will be happy to assist you.',
-    points: [
-      '24/7 Support',
-      'Easy Online Booking',
-      'Multiple Locations',
-      'Expert Consultation',
-    ],
-    middle: ["Verma Dental Care", "We’re Here for You!", "Reach Out Now"],
-    img: img,
-  }
 ];
+
 
 export const texts = [
   { main: "We Provide High Quality", highlight: "Dental", end: "Services" },
