@@ -86,21 +86,36 @@ const DentalCare = () => {
           </Swiper>
         ) : (
           // **Mobile View with Animated Text Changes**
-          <section className="flex flex-col items-center justify-center text-center  bg-white">
-            <KeyFeature right="Dental" mostright="Services" />
-            <h1
-              key={currentIndex}
-              className="text-2xl mt-2 font-bold text-blue-600 "
-            >
-              {servicedata[currentIndex].title}
-            </h1>
-            <p className="text-gray-600 text-lg font-serif mt-2">
-              {servicedata[currentIndex].description}
-            </p>
-            <button className="bg-blue-600 text-white px-5 py-2 rounded-lg mt-4">
-              Book Appointment
-            </button>
-            <img src={img} alt="Dentist Illustration" className="w-60 mt-6" />
+          <section className="min-h-screen bg-gray-50 flex flex-col">
+            <header className="bg-blue-600 rounded-md py-8 px-4 text-white text-center">
+              <h2 className="text-3xl font-extrabold">Our Services</h2>
+              <p className="mt-2 text-base">
+                Discover how we can help you smile brighter!
+              </p>
+            </header>
+
+            {/* Service Content Section */}
+            <main className="flex-grow flex flex-col items-center justify-center px-4">
+              <div className="bg-white p-6 w-full max-w-sm animate-fadeIn">
+                <h1
+                  key={currentIndex}
+                  className="text-2xl font-extrabold text-blue-600 text-center transition duration-300 ease-in-out hover:text-blue-800"
+                >
+                  {servicedata[currentIndex].title}
+                </h1>
+                <p className="text-gray-600 text-base font-serif mt-4 text-center">
+                  {servicedata[currentIndex].description}
+                </p>
+                <button className="bg-blue-600 hover:bg-blue-700 active:scale-95 text-white px-6 py-3 rounded-lg shadow-md mt-6 transition duration-300 ease-in-out w-full">
+                  Book Appointment
+                </button>
+                <img
+                  src={img}
+                  alt="Dentist Illustration"
+                  className="w-48 mx-auto mt-6 transition-transform duration-300 ease-in-out hover:scale-105"
+                />
+              </div>
+            </main>
           </section>
         )}
       </div>
@@ -124,7 +139,7 @@ export const Services = () => {
           <DentalServices data={dentalServices} orientation="row" cardHeightSmall={200}  cardHeightBig={280}/>
           <div className="mt-6"></div>
           <KeyFeature right="Casmetic" mostright="Procedures"/>
-          <DentalServices data={dentalServices} orientation="col" cardHeightBig={300}/>
+          <DentalServices data={dentalServices} orientation="col" cardHeightBig={300} cardHeightSmall={200}/>
         </div>
       </Container>
       <Footer/>

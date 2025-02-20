@@ -3,6 +3,31 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/footer';
 import background from "../img/backgroundd.jpg";
 import { Box, Button, Card, CardContent, CardMedia, Grid, TextField, Typography } from '@mui/material';
+import { Breadcrumbs } from '../components/Elements/Breadcrumbs';
+const ReadMoreButton = ({ link }) => (
+  <Button
+    size="small"
+    color="primary"
+    href={link}
+    sx={{
+      mt: "auto",
+      mb: "10px",
+      mx: "10px",
+      border: "1px solid #1976d2",
+      borderRadius: "4px",
+      p: "6px 12px",
+      backgroundColor: "transparent",
+      color: "#1976d2",
+      ":hover": {
+        borderColor: "#1565c0",
+        backgroundColor: "#1976d2",
+        color: "white",
+      },
+    }}
+  >
+    Read More
+  </Button>
+);
 const EducationSection = () => {
     const [searchQuery, setSearchQuery] = useState('');
   
@@ -34,14 +59,24 @@ const EducationSection = () => {
     const filteredBlogs = sortByRelevance(blogs, searchQuery);
   
     return (
-      <section id="education" style={{ backgroundColor: "#f9fafb" }}>
-        <Box sx={{ maxWidth: "1200px", margin: "0 auto", padding: 3 }}>
+      <section
+        id="education"
+        style={{ backgroundColor: "#f9fafb" }}
+        className="mx-auto p-[30px] lg:p-6"
+      >
+        <div className='ml-0 lg:ml-[50px]'><Breadcrumbs
+          links={[
+            { name: "Home", path: "/" },
+            { name: "Dentistry", path: null },
+          ]}
+        /></div>
+        <Box sx={{ maxWidth: "1200px", margin: "0 auto" }}>
           <TextField
             label="Search"
             variant="outlined"
             fullWidth
             onChange={(e) => setSearchQuery(e.target.value)}
-            style={{ marginBottom: "20px" }}
+            sx={{ mb: "20px" }}
           />
 
           <Grid container spacing={4} justifyContent="center">
@@ -58,14 +93,14 @@ const EducationSection = () => {
                         sx={{
                           display: "flex",
                           flexDirection: "column",
-                          height: "325px",
+                          minHeight: "325px",
                         }}
                       >
                         <CardMedia
                           component="img"
                           height="140"
                           image={video.image}
-                          alt={video.title}
+                          alt={video.title || "Educational Video"}
                         />
                         <CardContent sx={{ flexGrow: 1 }}>
                           <Typography variant="h6" noWrap>
@@ -75,30 +110,7 @@ const EducationSection = () => {
                             {video.description}
                           </Typography>
                         </CardContent>
-
-                        <Button
-                          size="small"
-                          color="primary"
-                          href={video.link}
-                          sx={{
-                            marginTop: "auto",
-                            marginBottom: "10px",
-                            marginLeft: "10px",
-                            marginRight: "10px",
-                            border: "1px solid #1976d2",
-                            borderRadius: "4px",
-                            padding: "6px 12px",
-                            backgroundColor: "transparent",
-                            color: "#1976d2",
-                            ":hover": {
-                              borderColor: "#1565c0",
-                              backgroundColor: "#1976d2",
-                              color: "white",
-                            },
-                          }}
-                        >
-                          Read More
-                        </Button>
+                        <ReadMoreButton link={video.link} />
                       </Card>
                     </Grid>
                   ))
@@ -108,8 +120,9 @@ const EducationSection = () => {
               </Grid>
             </Grid>
 
+            {/* Blogs */}
             <Grid item xs={12} md={6}>
-            <Typography variant="h5" gutterBottom sx={{ color: "#374151" }}>
+              <Typography variant="h5" gutterBottom sx={{ color: "#374151" }}>
                 Blogs
               </Typography>
               <Grid container spacing={2}>
@@ -120,14 +133,14 @@ const EducationSection = () => {
                         sx={{
                           display: "flex",
                           flexDirection: "column",
-                          height: "325px",
+                          minHeight: "325px",
                         }}
                       >
                         <CardMedia
                           component="img"
                           height="140"
                           image={blog.image}
-                          alt={blog.title}
+                          alt={blog.title || "Blog"}
                         />
                         <CardContent sx={{ flexGrow: 1 }}>
                           <Typography variant="h6" noWrap>
@@ -137,29 +150,7 @@ const EducationSection = () => {
                             {blog.description}
                           </Typography>
                         </CardContent>
-                        <Button
-                          size="small"
-                          color="primary"
-                          href={blog.link}
-                          sx={{
-                            marginTop: "auto", // Ensures the button stays at the bottom of the card
-                            marginBottom: "10px",
-                            marginLeft: "10px",
-                            marginRight: "10px",
-                            border: "1px solid #1976d2", // Example border color (primary color)
-                            borderRadius: "4px", // Optional: Rounded corners for the border
-                            padding: "6px 12px", // Optional: Adjust padding for a better look
-                            backgroundColor: "transparent", // Initial background color (transparent)
-                            color: "#1976d2", // Text color to match the border
-                            ":hover": {
-                              borderColor: "#1565c0", // Darker border color on hover
-                              backgroundColor: "#1976d2", // Change background color on hover
-                              color: "white", // Change text color on hover
-                            },
-                          }}
-                        >
-                          Read More
-                        </Button>
+                        <ReadMoreButton link={blog.link} />
                       </Card>
                     </Grid>
                   ))
