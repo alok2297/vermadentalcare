@@ -28,7 +28,7 @@ const DentalCare = () => {
     }
   }, [isDesktop, servicedata.length]);
   return (
-    <div className="w-full lg:py-16 bg relative bg-white shadow-none lg:shadow-[0_4px_10px_rgba(0,0,0,0.1)]">
+    <div className="w-full sm:py-0 lg:py-16 bg relative bg-white shadow-none lg:shadow-[0_4px_10px_rgba(0,0,0,0.1)]">
       <div className="sm:px-2 lg:px-12">
         {isDesktop ? (
           // **Desktop View with Swiper**
@@ -86,7 +86,7 @@ const DentalCare = () => {
           </Swiper>
         ) : (
           // **Mobile View with Animated Text Changes**
-          <section className="min-h-screen bg-gray-50 flex flex-col">
+          <section className=" bg-gray-50 flex flex-col">
             <header className="bg-blue-600 rounded-md py-8 px-4 text-white text-center">
               <h2 className="text-3xl font-extrabold">Our Services</h2>
               <p className="mt-2 text-base">
@@ -95,15 +95,15 @@ const DentalCare = () => {
             </header>
 
             {/* Service Content Section */}
-            <main className="flex-grow flex flex-col items-center justify-center px-4">
-              <div className="bg-white p-6 w-full max-w-sm animate-fadeIn">
+            <main className="flex flex-col items-center justify-center px-4">
+              <div className="bg-white p-4 w-full max-w-sm animate-fadeIn">
                 <h1
                   key={currentIndex}
-                  className="text-2xl font-extrabold text-blue-600 text-center transition duration-300 ease-in-out hover:text-blue-800"
+                  className="text-2xl font-extrabold text-blue-500 text-center transition duration-300 ease-in-out"
                 >
                   {servicedata[currentIndex].title}
                 </h1>
-                <p className="text-gray-600 text-base font-serif mt-4 text-center">
+                <p className="text-gray-600 text-base font-serif mt-2 text-center">
                   {servicedata[currentIndex].description}
                 </p>
                 <button className="bg-blue-600 hover:bg-blue-700 active:scale-95 text-white px-6 py-3 rounded-lg shadow-md mt-6 transition duration-300 ease-in-out w-full">
