@@ -5,7 +5,7 @@ import profile from "../img/doc_profile.png";
 import img from "../img/HeroImage.png";
 export const servicedata = [
   {
-    title: "Root Canal Treatment",
+    title: "Canal Treatment",
     description: "Painless and effective treatment to save your natural tooth.",
     middle: ["Expert Dental Care", "Ensuring Healthy & Beautiful Smiles"],
     img: img,

@@ -35,12 +35,18 @@ const About = () => {
           less stressful, so you can focus on maintaining a healthy smile. Thank
           you for choosing Verma Dental Care!
         </p>
-        <div className="flex align-middle justify-center">
+        <div className="flex gap-3">
           <a
             href="/appointments"
             className="inline-block bg-blue-600 text-white py-2 px-6 rounded-md text-sm lg:text-lg hover:bg-blue-700 transition duration-300"
           >
             Book an Appointment
+          </a>
+          <a
+            href="/appointments"
+            className="inline-block bg-yellow-400 text-white py-2 px-6 rounded-md text-sm lg:text-lg hover:bg-yellow-600 transition duration-300"
+          >
+            Call us
           </a>
         </div>
       </div>

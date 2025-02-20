@@ -106,14 +106,14 @@ const DentalCare = () => {
                 <p className="text-gray-600 text-base font-serif mt-2 text-center">
                   {servicedata[currentIndex].description}
                 </p>
-                <button className="bg-blue-600 hover:bg-blue-700 active:scale-95 text-white px-6 py-3 rounded-lg shadow-md mt-6 transition duration-300 ease-in-out w-full">
-                  Book Appointment
-                </button>
                 <img
                   src={img}
                   alt="Dentist Illustration"
                   className="w-48 mx-auto mt-6 transition-transform duration-300 ease-in-out hover:scale-105"
                 />
+                <button className="bg-yellow-500 hover:bg-blue-700 active:scale-95 text-white px-6 py-2 rounded-lg shadow-md mt-6 transition duration-300 ease-in-out w-full">
+                  Book Appointment
+                </button>
               </div>
             </main>
           </section>
