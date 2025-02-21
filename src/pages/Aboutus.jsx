@@ -44,7 +44,7 @@ const About = () => {
           </a>
           <a
             href="/appointments"
-            className="inline-block bg-yellow-400 text-white py-2 px-6 rounded-md text-sm lg:text-lg hover:bg-yellow-600 transition duration-300"
+            className="inline-block border border-gray-600 py-2 px-6 rounded-md text-sm lg:text-lg"
           >
             Call us
           </a>

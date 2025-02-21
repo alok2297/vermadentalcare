@@ -12,7 +12,7 @@ function NavbarCreation({location,setIsOpen}){
         <li key={item.to}>
           <Link
             to={item.to}
-            className={`px-4 py-2 rounded ${
+            className={`px-5 py-2 rounded ${
               location.pathname === item.to
                 ? "bg-blue-600 text-white"
                 : "hover:text-blue-600"

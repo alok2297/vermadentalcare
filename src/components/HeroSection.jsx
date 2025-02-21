@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react'
 import hero2 from "../img/HeroImage.png"
 import { motion, AnimatePresence } from 'framer-motion';
 import {texts} from "../data/data"
+import { useNavigate } from 'react-router-dom';
 export const HeroSection = () => {
   const [index, setIndex] = useState(0);
+  const navigate = useNavigate();
+
   useEffect(()=>{
     const interval = setInterval(()=>{
       setIndex((prevIndex)=>(prevIndex+1)%texts.length);
@@ -11,6 +14,9 @@ export const HeroSection = () => {
 
     return ()=> clearInterval(interval);
   },[]);
+  function handleClick(){
+    navigate("/appointment");
+  }
 
   return (
     <section className="flex flex-col md:flex-row items-center justify-between px-4 md:px-32 lg:py-8 sm:py-0 bg-white">
@@ -33,10 +39,10 @@ export const HeroSection = () => {
           Your Smile Our Passion
         </p>
         <div className="mt-6 flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4 justify-center md:justify-start">
-          <button className="bg-blue-600 text-white px-5 py-2 rounded-lg w-full md:w-auto">
+          <button onClick={handleClick} className="bg-blue-600 text-white px-5 py-2 rounded-lg w-full md:w-auto">
             Appointment
           </button>
-          <button className="border border-gray-600 px-5 py-2 rounded-lg w-full md:w-auto">
+          <button className="border border-gray-600 px-5 py-2 rounded-lg w-full md:w-auto" onClick={() => window.location.href = 'tel:+918563852477'}>
             Call Me
           </button>
         </div>

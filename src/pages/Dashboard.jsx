@@ -113,9 +113,9 @@ export const Dashboard = () => {
         }/>
         </div>
 
-        <div className='mb-14'>
+        
         <Footer/>
-        </div>
+  
         {/* Add the Chatbot to your Dashboard */}
       <Chatbot/>
     </div>

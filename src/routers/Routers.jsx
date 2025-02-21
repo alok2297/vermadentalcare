@@ -10,6 +10,7 @@ import { Aboutus } from '../pages/Aboutus';
 import { Dentistry } from '../pages/Dentistry';
 import { ScrollToTop } from '../Helper';
 import { MyAppointments } from '../pages/MyAppointments';
+import AppointmentBooking from '../components/AppointmentBooking/AppointmentBooking';
 export const Routers = () => {
   const hasTokenValue = useStorage("token");
   const [hasToken, setHasToken] = useState(false);
@@ -20,12 +21,12 @@ export const Routers = () => {
       children: [],
       requireToken: false,
     },
-    {
-      path:"/appointment",
-      element:<Appointment/>,
-      children:[],
-      requireToken:true,
-    },
+    // {
+    //   path:"/appointment",
+    //   element:<Appointment/>,
+    //   children:[],
+    //   requireToken:true,
+    // },
     {
       path:"/login",
       element:<LoginPage/>,
@@ -59,6 +60,12 @@ export const Routers = () => {
     {
       path:"/dentistry",
       element:<Dentistry/>,
+      children:[],
+      requireToken:false,
+    },
+    {
+      path:"/appointment",
+      element:<AppointmentBooking/>,
       children:[],
       requireToken:false,
     }

@@ -65,8 +65,8 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-10 flex flex-col md:flex-row items-center justify-between text-gray-500 text-sm">
-          <p>© 2024 Verma Dental Care ・ Privacy ・ Terms ・ Sitemap</p>
+        <div className="mt-10 mb-[90px] lg:mb-0 flex flex-col md:flex-row items-center justify-between text-gray-500 text-sm">
+          <p>© 2024 Verma Dental Care ・ Privacy ・ Terms ・ Sitemap ・ Developer @NxaOne </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <FaTwitter className="text-blue-500 cursor-pointer" size={20} />
             <FaFacebookF className="text-blue-600 cursor-pointer" size={20} />
