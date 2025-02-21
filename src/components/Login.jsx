@@ -1,7 +1,7 @@
 import React from 'react'
 export const Login = () => {
   return (
-    <div className="flex items-center justify-center bg-gradient-to-b from-gray-100 to-white">
+    <div className="flex items-center justify-center bg-gradient-to-b from-gray-50 to-white">
       <div className="w-full max-w-md lg:my-10 sm:my-1 bg-white/20 backdrop-blur-md p-8 md:rounded-2xl sm:rounded-none lg:shadow-lg sm:shadow-none">
         <h2 className="text-2xl font-bold text-center text-gray-700 mb-6">Welcome Back</h2>
         <form>

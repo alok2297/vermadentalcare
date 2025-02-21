@@ -87,7 +87,7 @@ const DentalCare = () => {
         ) : (
           // **Mobile View with Animated Text Changes**
           <section className=" bg-gray-50 flex flex-col">
-            <header className="bg-blue-600 rounded-md py-8 px-4 text-white text-center">
+            <header className="bg-blue-500 rounded-md py-8 px-4 text-white text-center">
               <h2 className="text-3xl font-extrabold">Our Services</h2>
               <p className="mt-2 text-base">
                 Discover how we can help you smile brighter!
@@ -96,7 +96,7 @@ const DentalCare = () => {
 
             {/* Service Content Section */}
             <main className="flex flex-col items-center justify-center px-4">
-              <div className="bg-white p-4 w-full max-w-sm animate-fadeIn">
+              <div className="p-4 w-full max-w-sm animate-fadeIn">
                 <h1
                   key={currentIndex}
                   className="text-2xl font-extrabold text-blue-500 text-center transition duration-300 ease-in-out"
@@ -111,7 +111,7 @@ const DentalCare = () => {
                   alt="Dentist Illustration"
                   className="w-48 mx-auto mt-6 transition-transform duration-300 ease-in-out hover:scale-105"
                 />
-                <button className="bg-yellow-500 hover:bg-blue-700 active:scale-95 text-white px-6 py-2 rounded-lg shadow-md mt-6 transition duration-300 ease-in-out w-full">
+                <button className="bg-blue-500 hover:bg-blue-600 active:scale-95 text-white px-6 py-2 rounded-lg shadow-md mt-6 transition duration-300 ease-in-out w-full">
                   Book Appointment
                 </button>
               </div>
@@ -136,7 +136,7 @@ export const Services = () => {
       <Container>
         <div className="container mx-auto px-4">
           <KeyFeature right="Dental Service" mostright="Overview"/>
-          <DentalServices data={dentalServices} orientation="row" cardHeightSmall={200}  cardHeightBig={280}/>
+          <DentalServices data={dentalServices} orientation="row" cardHeightSmall={200}  cardHeightBig={300}/>
           <div className="mt-6"></div>
           <KeyFeature right="Casmetic" mostright="Procedures"/>
           <DentalServices data={dentalServices} orientation="col" cardHeightBig={300} cardHeightSmall={200}/>
