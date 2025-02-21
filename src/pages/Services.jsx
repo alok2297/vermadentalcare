@@ -28,7 +28,7 @@ const DentalCare = () => {
     }
   }, [isDesktop, servicedata.length]);
   return (
-    <div className="w-full sm:py-0 lg:py-16 bg relative bg-white shadow-none lg:shadow-[0_4px_10px_rgba(0,0,0,0.1)]">
+    <div className="w-full sm:py-0 lg:py-16 bg relative bg-gradient-to-r from-blue-600 to-purple-600shadow-none rounded-lg lg:shadow-[0_4px_10px_rgba(0,0,0,0.1)]">
       <div className="sm:px-2 lg:px-12">
         {isDesktop ? (
           // **Desktop View with Swiper**
@@ -43,18 +43,18 @@ const DentalCare = () => {
           >
             {servicedata.map((service, index) => (
               <SwiperSlide key={index}>
-                <div className="flex flex-col lg:flex-row items-center justify-center relative">
+                <div className="flex flex-col rounded-2xl lg:flex-row items-center justify-center relative">
                   <div className="max-1/2 text-center md:text-left space-y-2">
-                    <h3 className="text-3xl font-bold text-blue-600">
+                    <h3 className="text-3xl font-bold text-white">
                       Dental Services
                     </h3>
-                    <h1 className="text-3xl md:text-5xl font-bold text-gray-900">
+                    <h1 className="text-3xl md:text-5xl font-bold text-white">
                       {service.title}
                     </h1>
-                    <p className="text-gray-600 text-lg md:text-xl font-serif">
+                    <p className="text-white text-lg md:text-xl font-serif">
                       {service.description}
                     </p>
-                    <button className="bg-blue-600 text-white px-5 py-2 rounded-lg w-full md:w-auto">
+                    <button className="shadow-lg  border border-l-purple-50 text-white px-5 py-2 rounded-lg w-full md:w-auto">
                       Book Appointment
                     </button>
                   </div>
@@ -87,7 +87,7 @@ const DentalCare = () => {
         ) : (
           // **Mobile View with Animated Text Changes**
           <section className=" bg-gray-50 flex flex-col">
-            <header className="bg-blue-500 rounded-md py-8 px-4 text-white text-center">
+            <header className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-md py-8 px-4 text-white text-center">
               <h2 className="text-3xl font-extrabold">Our Services</h2>
               <p className="mt-2 text-base">
                 Discover how we can help you smile brighter!
