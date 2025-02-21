@@ -139,7 +139,7 @@ export const Services = () => {
           <DentalServices data={dentalServices} orientation="row" cardHeightSmall={200}  cardHeightBig={300}/>
           <div className="mt-6"></div>
           <KeyFeature right="Casmetic" mostright="Procedures"/>
-          <DentalServices data={dentalServices} orientation="col" cardHeightBig={300} cardHeightSmall={200}/>
+          <DentalServices data={dentalServices} orientation="col"  cardHeightBig={300} />
         </div>
       </Container>
       <Footer/>

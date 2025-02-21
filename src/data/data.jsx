@@ -207,31 +207,31 @@ export const dentalServices = [
 
  export const doctors = [
     {
-      name: "Dr. Priya Verma",
+      name: "Dr. Ishank Verma",
       degree: "BDS , MDS",
       specialty: "Cosmetic Dentistry & Restorative Care",
       image: profile, // Replace with actual image path
     },
     {
-      name: "Dr. Anil Verma",
+      name: "Dr. Alok Verma",
       degree: "BDS, MDS",
       specialty: "Cosmetic Dentistry & Preventive Care",
       image: profile,
     },
     {
-      name: "Dr. Karan Singh",
+      name: "Dr. Aman Singh",
       degree: "MDS",
       specialty: "Orthodontics & Braces Restorative Care",
       image: profile,
     },
     {
-      name: "Dr. Neha Sharma",
+      name: "Dr. Ayushi Verma",
       degree: "BDS , MDS",
       specialty: "Endodontics & Root Canal Treatments",
       image: profile,
     },
     {
-      name: "Dr. Rajesh Kumar",
+      name: "Dr. Atul Kumar",
       degree: "BDS",
       specialty: "Pediatric Dentistry",
       image: profile,
