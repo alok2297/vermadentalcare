@@ -21,12 +21,6 @@ export const Routers = () => {
       children: [],
       requireToken: false,
     },
-    // {
-    //   path:"/appointment",
-    //   element:<Appointment/>,
-    //   children:[],
-    //   requireToken:true,
-    // },
     {
       path:"/login",
       element:<LoginPage/>,

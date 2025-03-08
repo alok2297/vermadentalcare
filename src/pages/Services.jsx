@@ -65,7 +65,7 @@ const DentalCare = () => {
                         alt="Dentist Illustration"
                         className="w-80 md:w-64"
                       />
-                      <div className="absolute top-1 left-[-140px] bg-white shadow-md p-2 rounded-md">
+                      <div className="absolute top-1 left-[-130px] bg-white shadow-md p-2 rounded-md">
                         <p className="text-gray-900 font-semibold">
                           500+ Happy Customers
                         </p>
@@ -75,7 +75,7 @@ const DentalCare = () => {
                           2000+ Teeth Fixed
                         </p>
                       </div>
-                      <div className="absolute bottom-1 left-[-140px] bg-white p-2 shadow-md rounded-md text-gray-900 font-semibold">
+                      <div className="absolute bottom-1 left-[-145px] bg-white p-2 shadow-md rounded-md text-gray-900 font-semibold">
                         20+ Expert Dentists
                       </div>
                     </div>
