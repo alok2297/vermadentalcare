@@ -3,7 +3,7 @@ import brightsmile from "../img/brightsmile.jpg";
 import generalcare from "../img/generalcare.jpg";
 import profile from "../img/doc_profile.png";
 import img from "../img/HeroImage.png";
-export const videos = [
+export const videoData = [
   {
     id: 1,
     title: "How to Brush Your Teeth Properly",
@@ -75,66 +75,76 @@ export const videos = [
     embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
 ];
-export const blogs = [
+export const blogData = [
   {
     id: 1,
     title: "The Importance of Regular Dental Checkups",
     description:
       "Regular dental checkups are essential for maintaining oral health. Learn why you should visit your dentist every six months.",
+    img: "https://babylondentalcare.com/wp-content/uploads/2020/10/shutterstock_1062891104.jpg",
   },
   {
     id: 2,
     title: "How to Prevent Cavities Naturally",
     description:
       "Discover natural ways to prevent cavities and keep your teeth healthy without relying solely on fluoride.",
+    img: "https://babylondentalcare.com/wp-content/uploads/2020/10/shutterstock_1062891104.jpg",
   },
   {
     id: 3,
     title: "The Role of Diet in Oral Health",
     description:
       "Your diet plays a crucial role in your oral health. Learn which foods to eat and avoid for healthy teeth and gums.",
+    img: "https://babylondentalcare.com/wp-content/uploads/2020/10/shutterstock_1062891104.jpg",
   },
   {
     id: 4,
     title: "Understanding Gum Disease",
     description:
       "Gum disease is a common issue. Learn about its causes, symptoms, and how to prevent it.",
+    img: "https://babylondentalcare.com/wp-content/uploads/2020/10/shutterstock_1062891104.jpg",
   },
   {
     id: 5,
     title: "Teeth Whitening: Myths vs. Facts",
     description:
       "There are many myths about teeth whitening. Here’s what you need to know to achieve a brighter smile safely.",
+    img: "https://babylondentalcare.com/wp-content/uploads/2020/10/shutterstock_1062891104.jpg",
   },
   {
     id: 6,
     title: "The Benefits of Flossing Daily",
     description:
       "Flossing is often overlooked, but it’s crucial for oral health. Learn why you should floss every day.",
+    img: "https://babylondentalcare.com/wp-content/uploads/2020/10/shutterstock_1062891104.jpg",
   },
   {
     id: 7,
     title: "How to Choose the Right Toothbrush",
     description:
       "Not all toothbrushes are created equal. Find out how to choose the best one for your needs.",
+    img: "https://babylondentalcare.com/wp-content/uploads/2020/10/shutterstock_1062891104.jpg",
   },
   {
     id: 8,
     title: "The Connection Between Oral Health and Overall Health",
     description:
       "Your oral health is linked to your overall health. Learn how taking care of your teeth can benefit your entire body.",
+    img: "https://babylondentalcare.com/wp-content/uploads/2020/10/shutterstock_1062891104.jpg",
   },
   {
     id: 9,
     title: "Common Dental Procedures Explained",
     description:
       "From fillings to root canals, learn about common dental procedures and what to expect.",
+    img: "https://babylondentalcare.com/wp-content/uploads/2020/10/shutterstock_1062891104.jpg",
   },
   {
     id: 10,
     title: "Tips for Maintaining Oral Hygiene",
     description:
       "Simple tips and tricks to maintain excellent oral hygiene and keep your smile healthy.",
+    img: "https://babylondentalcare.com/wp-content/uploads/2020/10/shutterstock_1062891104.jpg",
   },
 ];
 export const servicedata = [

@@ -28,7 +28,7 @@ const DentalCare = () => {
     }
   }, [isDesktop, servicedata.length]);
   return (
-    <div className="w-full sm:py-0 lg:py-16 bg relative bg-gradient-to-r from-blue-600 to-purple-600shadow-none rounded-lg lg:shadow-[0_4px_10px_rgba(0,0,0,0.1)]">
+    <div className="w-full sm:py-0 lg:py-16 bg relative bg-gradient-to-r from-blue-600 via-blue-400 to-blue-200 shadow-none rounded-lg lg:shadow-[0_4px_10px_rgba(0,0,0,0.1)]">
       <div className="sm:px-2 lg:px-12">
         {isDesktop ? (
           // **Desktop View with Swiper**
