@@ -3,7 +3,7 @@ import { Navbar } from '../components/Navbar'
 import { Login } from '../components/Login'
 import { Footer } from '../components/footer'
 
-export const LoginPage = () => {
+const LoginPage = () => {
   return (
     <div>
         <Navbar/>
@@ -12,3 +12,4 @@ export const LoginPage = () => {
     </div>
   )
 }
+export default LoginPage;

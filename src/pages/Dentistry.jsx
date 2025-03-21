@@ -3,7 +3,7 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/footer';
 import {blogs} from "../data/data"
 import {videos} from "../data/data"
-const DentistryPage = () => {
+export const DentistryPage = () => {
   const [selectedTab, setSelectedTab] = useState("blog"); // State to manage selected tab
 
   return (
@@ -116,13 +116,12 @@ const DentistryPage = () => {
     </div>
   );
 };
-
-export default DentistryPage;
   
-export const Dentistry = () => {
+const Dentistry = () => {
   return (
     <div><Navbar/>
     <DentistryPage/>
     <Footer/></div>
   );
 };
+export default Dentistry;

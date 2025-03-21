@@ -54,7 +54,7 @@ const About = () => {
   );
 };
 
-export const Aboutus = () => {
+const Aboutus = () => {
   return (
     <div>
         <Navbar/>
@@ -63,3 +63,4 @@ export const Aboutus = () => {
     </div>
   )
 }
+export default Aboutus;

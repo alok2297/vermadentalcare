@@ -68,7 +68,7 @@ function Contact() {
     </div>
   );
 }
-export const ContactUs = () => {
+const ContactUs = () => {
   return (
     <div>
       <Navbar />
@@ -77,3 +77,4 @@ export const ContactUs = () => {
     </div>
   );
 };
+export default Contact;

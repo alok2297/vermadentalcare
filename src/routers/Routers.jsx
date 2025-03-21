@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { lazy, Suspense, useEffect, useState } from 'react'
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
-import { Dashboard } from '../pages/Dashboard';
-import { Appointment } from '../components/Appointment/Appointment';
-import { useStorage } from './useStorage';
-import { LoginPage } from '../pages/LoginPage';
-import { Services } from '../pages/Services';
-import { ContactUs } from '../pages/Contactus';
-import { Aboutus } from '../pages/Aboutus';
-import { Dentistry } from '../pages/Dentistry';
 import { ScrollToTop } from '../Helper';
-import { MyAppointments } from '../pages/MyAppointments';
-import AppointmentBooking from '../components/AppointmentBooking/AppointmentBooking';
+import { useStorage } from './useStorage';
+import { Fallback } from '../components/Fallback';
+
+//lazy loaded Pages and Components
+const Dashboard = lazy(() => import('../pages/Dashboard'));
+const LoginPage = lazy(() => import('../pages/LoginPage'));
+const MyAppointments = lazy(() => import('../pages/MyAppointments'));
+const Services = lazy(() => import('../pages/Services'));
+const ContactUs = lazy(() => import('../pages/Contactus'));
+const Aboutus = lazy(() => import('../pages/Aboutus'));
+const Dentistry = lazy(() => import('../pages/Dentistry'));
+const AppointmentBooking = lazy(() => import('../components/AppointmentBooking/AppointmentBooking'));
 export const Routers = () => {
   const hasTokenValue = useStorage("token");
   const [hasToken, setHasToken] = useState(false);
@@ -87,10 +89,23 @@ export const Routers = () => {
       </Route> 
     ))
   }
+
+  const DelayedFallback = () => {
+    const [show, setShow] = useState(false);
+  
+    useEffect(() => {
+      const timer = setTimeout(() => setShow(true), 5000);
+      return () => clearTimeout(timer);
+    }, []);
+  
+    return show ? <Fallback /> : null;
+  };
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Routes>{getRoute(routesList)}</Routes>
+      <Suspense fallback={<div><DelayedFallback/></div>}>
+        <Routes>{getRoute(routesList)}</Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

@@ -4,7 +4,7 @@ import { Footer } from "../components/footer";
 import { Breadcrumbs } from "../components/Elements/Breadcrumbs";
 import { useMediaQuery } from "react-responsive";
 
-export const MyAppointments = () => {
+const MyAppointments = () => {
   const appointments = Array.from({ length: 10 }, (_, i) => ({
     id: i + 1,
     date: `20 February`,
@@ -170,3 +170,4 @@ export const MyAppointments = () => {
     </div>
   );
 };
+export default MyAppointments;

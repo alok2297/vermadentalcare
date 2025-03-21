@@ -123,7 +123,7 @@ const DentalCare = () => {
   );
 };
 
-export const Services = () => {
+const Services = () => {
 
   return (
     <div>
@@ -146,3 +146,4 @@ export const Services = () => {
     </div>
   );
 };
+export default Services;

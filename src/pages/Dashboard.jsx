@@ -5,7 +5,6 @@ import { Container } from '../components/Elements/Container';
 import { ServiceSteps } from '../components/Dashboard/ServiceSteps';
 import DentalServices from '../components/Dashboard/DentalServices';
 import { SqaureCard } from '../components/SqaureCard';
-import {Swiper} from "../components/Swiper";
 import clinic from "../../src/img/Clinic.png"
 import { useMediaQuery } from 'react-responsive';
 import { Footer } from '../components/footer';
@@ -77,7 +76,7 @@ import { DoctorSection } from '../components/Doctor/DoctorSection';
   };
   
 
-export const Dashboard = () => {
+const Dashboard = () => {
   return (
     <div>
         <Navbar/>
@@ -121,3 +120,4 @@ export const Dashboard = () => {
     </div>
   )
 }
+export default Dashboard;
