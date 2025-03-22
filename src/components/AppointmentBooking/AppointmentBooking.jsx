@@ -109,7 +109,7 @@ const AppointmentBooking = () => {
                     <input
                       id="dateTime"
                       type="datetime-local"
-                      className="w-full p-3 focus:outline-none border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
+                      className="w-full p-3 sm:pl-10 lg:pr-1 bg-white focus:outline-none border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
                       value={dateTime}
                       onChange={(e) => setDateTime(e.target.value)}
                       required

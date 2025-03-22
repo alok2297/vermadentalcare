@@ -1,24 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/footer";
 import { Breadcrumbs } from "../components/Elements/Breadcrumbs";
 import { useMediaQuery } from "react-responsive";
 
 const MyAppointments = () => {
-  const appointments = Array.from({ length: 10 }, (_, i) => ({
-    id: i + 1,
-    date: `20 February`,
-    clinic: "Verma Dental Clinic",
-    doctor: "Tarun Shukla",
-    bookedOn: "25 January 2025",
-    fee: "1,099.00",
-    appointmentId: `402-8658376-51059${i}`,
-  }));
-
   const [currentPage, setCurrentPage] = useState(1);
+  const [appointments, setAppointments] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState("past-week");
   const [activeTab, setActiveTab] = useState("upcoming");
   const itemsPerPage = 5;
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAppointments(
+        Array.from({ length: 10 }, (_, i) => ({
+          id: i + 1,
+          date: "20 February",
+          clinic: "Verma Dental Clinic",
+          doctor: "Tarun Shukla",
+          bookedOn: "25 January 2025",
+          fee: "1,099.00",
+          appointmentId: `402-8658376-51059${i}`,
+        }))
+      );
+      setLoading(false);
+    }, 2000);
+  }, []);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -110,46 +119,63 @@ const MyAppointments = () => {
         </div>
 
         {/* Appointments List */}
-        <div className="border rounded-lg p-4 bg-white shadow-sm">
-          {currentItems.map((item) => (
-            <div
-              key={item.id}
-              className="border-b py-4 flex flex-col md:flex-row gap-4"
-            >
-              {/* Appointment Details */}
-              <div className="md:w-3/4">
-                <h3 className="text-lg font-semibold">
-                  Appointment on {item.date}
-                </h3>
-                <p className="text-sm">at {item.clinic}</p>
-                <p className="text-sm text-gray-500">
-                  Booked on: {item.bookedOn}
-                </p>
-                <p className="text-sm text-gray-500">Fee: ₹{item.fee}</p>
-                <p className="text-sm text-gray-500">Doctor: {item.doctor}</p>
-                <p className="text-sm text-gray-500">
-                  Appointment ID: {item.appointmentId}
-                </p>
-              </div>
+        {loading
+          ? Array.from({ length: 5 }).map((_, index) => (
+              <div
+                key={index}
+                className="border-b py-4 animate-pulse flex flex-col md:flex-row gap-4"
+              >
+                {/* Left Section - Appointment Info */}
+                <div className="md:w-3/4">
+                  <div className="h-5 bg-gray-300 rounded w-3/4 mb-2"></div>
+                  <div className="h-4 bg-gray-200 rounded w-1/2 mb-1"></div>
+                  <div className="h-4 bg-gray-200 rounded w-1/3"></div>
+                </div>
 
-              {/* Buttons */}
-              <div className="flex flex-col md:w-1/4 gap-2">
-                <button className="bg-yellow-500 text-white px-4 py-2 rounded-lg w-full">
-                  Payment Receipt
-                </button>
-                <button className="border px-4 py-2 rounded-lg w-full">
-                  Doctor Contact
-                </button>
-                <button className="border px-4 py-2 rounded-lg w-full">
-                  Prescription
-                </button>
-                <button className="border px-4 py-2 rounded-lg w-full">
-                  Reschedule
-                </button>
+                {/* Right Section - Buttons */}
+                <div className="flex flex-col md:w-1/4 gap-2">
+                  <div className="h-10 bg-gray-300 rounded-lg w-full"></div>
+                  <div className="h-10 bg-gray-300 rounded-lg w-full"></div>
+                  <div className="h-10 bg-gray-300 rounded-lg w-full"></div>
+                  <div className="h-10 bg-gray-300 rounded-lg w-full"></div>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))
+          : currentItems.map((item) => (
+              <div
+                key={item.id}
+                className="border-b py-4 flex flex-col md:flex-row gap-4"
+              >
+                <div className="md:w-3/4">
+                  <h3 className="text-lg font-semibold">
+                    Appointment on {item.date}
+                  </h3>
+                  <p className="text-sm">at {item.clinic}</p>
+                  <p className="text-sm text-gray-500">
+                    Booked on: {item.bookedOn}
+                  </p>
+                  <p className="text-sm text-gray-500">Fee: ₹{item.fee}</p>
+                  <p className="text-sm text-gray-500">Doctor: {item.doctor}</p>
+                  <p className="text-sm text-gray-500">
+                    Appointment ID: {item.appointmentId}
+                  </p>
+                </div>
+                <div className="flex flex-col md:w-1/4 gap-2">
+                  <button className="bg-yellow-500 text-white px-4 py-2 rounded-lg w-full">
+                    Payment Receipt
+                  </button>
+                  <button className="border px-4 py-2 rounded-lg w-full">
+                    Doctor Contact
+                  </button>
+                  <button className="border px-4 py-2 rounded-lg w-full">
+                    Prescription
+                  </button>
+                  <button className="border px-4 py-2 rounded-lg w-full">
+                    Reschedule
+                  </button>
+                </div>
+              </div>
+            ))}
 
         {/* Pagination */}
         <div className="flex justify-center mt-4 space-x-2">

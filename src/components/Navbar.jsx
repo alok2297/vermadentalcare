@@ -34,7 +34,7 @@ export const Navbar = () => {
   return (
     <div>
       <nav className="bg-white pr-9 flex justify-between items-center  md:px-10 py-2 relative">
-        <img className="w-[130px] h-[70px] md:w-[220px] md:h-[100px]" src={logo} alt="Logo" />
+        <img className="w-[150px] h-[75px] object-cover md:w-[220px] md:h-[100px]" src={logo} alt="Logo" />
         
         <ul className="hidden md:flex mr-[50px] space-x-6 text-gray-700 font-medium">
           <NavbarCreation location={location} setIsOpen={setIsOpen} />

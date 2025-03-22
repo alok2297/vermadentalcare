@@ -177,43 +177,43 @@ export const texts = [
   { main: "Bringing Confidence", highlight: "to Your", end: "Smile" }
 ];
 export const dentalServices = [
-    {
-      title: "General Care",
-      description: "Routine check-ups ensure oral health and prevent issues.",
-      category: "General Dentistry",
-      image: alignment,
-    },
-    {
-      title: "Brighten Smile",
-      description: "Enhance your smile with our advanced cosmetic procedures.",
-      category: "Cosmetic Dentistry",
-      image: brightsmile,
-    },
-    {
-      title: "Perfect Alignment",
-      description: "Achieve perfect alignment with our orthodontic solutions.",
-      category: "Orthodontics",
-      image: generalcare,
-    },
-    {
-      title: "General Care",
-      description: "Routine check-ups ensure oral health and prevent issues.",
-      category: "General Dentistry",
-      image: alignment,
-    },
-    {
-      title: "Brighten Smile",
-      description: "Enhance your smile with our advanced cosmetic procedures.",
-      category: "Cosmetic Dentistry",
-      image: brightsmile,
-    },
-    {
-      title: "Perfect Alignment",
-      description: "Achieve perfect alignment with our orthodontic solutions.",
-      category: "Orthodontics",
-      image: generalcare,
-    },
-  ];
+  {
+    title: "General Care",
+    description: "Routine check-ups ensure oral health and prevent issues.",
+    category: "General Dentistry",
+    image: "https://tinyurl.com/mh99jsms",
+  },
+  {
+    title: "Brighten Smile",
+    description: "Enhance your smile with our advanced cosmetic procedures.",
+    category: "Cosmetic Dentistry",
+    image: "https://tinyurl.com/mh99jsms",
+  },
+  {
+    title: "Perfect Alignment",
+    description: "Achieve perfect alignment with our orthodontic solutions.",
+    category: "Orthodontics",
+    image: "https://tinyurl.com/mh99jsms",
+  },
+  {
+    title: "General Care",
+    description: "Routine check-ups ensure oral health and prevent issues.",
+    category: "General Dentistry",
+    image: "https://tinyurl.com/mh99jsms",
+  },
+  {
+    title: "Brighten Smile",
+    description: "Enhance your smile with our advanced cosmetic procedures.",
+    category: "Cosmetic Dentistry",
+    image: "https://tinyurl.com/mh99jsms",
+  },
+  {
+    title: "Perfect Alignment",
+    description: "Achieve perfect alignment with our orthodontic solutions.",
+    category: "Orthodontics",
+    image: "https://tinyurl.com/mh99jsms",
+  },
+];
 
  export const doctors = [
     {

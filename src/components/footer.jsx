@@ -2,13 +2,10 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa"
 import logo from "../img/vermadentalcarelogo.png"
 import { Link } from "react-router-dom";
 export const Footer = () => {
-  // useEffect(()=>{
-  //   e.preventDefault();
-  // },[])
   return (
     <footer className="py-5 px-6 text-gray-700 bg-[#ffffff] text-center md:text-left">
       <div className="max-w-6xl mx-auto">
-      <div className="border-b border-gray-300"></div>
+        <div className="border-b border-gray-300"></div>
         <div className="flex flex-col items-center mb-6">
           <img
             src={logo} // Replace with actual logo path
@@ -23,9 +20,9 @@ export const Footer = () => {
             <input
               type="email"
               placeholder="Input your email"
-              className="flex-1 outline-none bg-transparent text-sm"
+              className="flex-1 outline-none bg-transparent text-sm min-w-0"
             />
-            <button className="bg-blue-500 text-white px-4 py-2 min-w-[80px] sm:min-w-[100px] whitespace-nowrap">
+            <button className="bg-blue-500 text-white px-3 py-2 min-w-[80px] w-fit sm:w-auto whitespace-nowrap">
               Subscribe
             </button>
           </div>
@@ -50,8 +47,12 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold">Company</h4>
             <ul className="mt-2 space-y-1">
-              <li><Link to="/about">About us</Link></li>
-              <li><Link to="/contact">Contact us</Link></li>
+              <li>
+                <Link to="/about">About us</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact us</Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -66,7 +67,10 @@ export const Footer = () => {
 
         {/* Bottom Section */}
         <div className="mt-10 mb-[90px] lg:mb-0 flex flex-col md:flex-row items-center justify-between text-gray-500 text-sm">
-          <p>© 2024 Verma Dental Care ・ Privacy ・ Terms ・ Sitemap ・ Developer @NxaOne </p>
+          <p>
+            © 2024 Verma Dental Care ・ Privacy ・ Terms ・ Sitemap ・ Developer
+            @NxaOne{" "}
+          </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <FaTwitter className="text-blue-500 cursor-pointer" size={20} />
             <FaFacebookF className="text-blue-600 cursor-pointer" size={20} />
