@@ -33,7 +33,7 @@ export const Footer = () => {
             <h4 className="font-semibold">Product</h4>
             <ul className="mt-2 space-y-1">
               <li>Features</li>
-              <li>Pricing</li>
+              <li><Link to="/pricing">Pricing</Link></li>
             </ul>
           </div>
           <div>

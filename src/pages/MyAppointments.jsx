@@ -19,7 +19,7 @@ const MyAppointments = () => {
           id: i + 1,
           date: "20 February",
           clinic: "Verma Dental Clinic",
-          doctor: "Tarun Shukla",
+          doctor: "Lallan",
           bookedOn: "25 January 2025",
           fee: "1,099.00",
           appointmentId: `402-8658376-51059${i}`,

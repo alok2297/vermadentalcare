@@ -12,6 +12,7 @@ const Services = lazy(() => import('../pages/Services'));
 const ContactUs = lazy(() => import('../pages/Contactus'));
 const Aboutus = lazy(() => import('../pages/Aboutus'));
 const Dentistry = lazy(() => import('../pages/Dentistry'));
+const Price = lazy(()=> import('../pages/Price'));
 const AppointmentBooking = lazy(() => import('../components/AppointmentBooking/AppointmentBooking'));
 export const Routers = () => {
   const hasTokenValue = useStorage("token");
@@ -62,6 +63,12 @@ export const Routers = () => {
     {
       path:"/appointment",
       element:<AppointmentBooking/>,
+      children:[],
+      requireToken:false,
+    },
+    {
+      path:"/pricing",
+      element:<Price/>,
       children:[],
       requireToken:false,
     }

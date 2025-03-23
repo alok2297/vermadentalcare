@@ -10,11 +10,9 @@ export const navbarItems = [
     { to: '/services', label: 'Services' },
     { to: '/dentistry', label: 'Dentistry' },
     { to: '/myappointment', label: 'My Appointments' },
-    { to: '/about', label: 'About Us' },
+    { to: '/pricing', label: 'Pricing' },
     {to: '/login', label: 'Login/Signup'}
 ];
-
-
 
 
 export const ScrollToTop = () => {
