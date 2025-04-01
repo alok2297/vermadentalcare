@@ -28,7 +28,7 @@ const DentalCare = () => {
     }
   }, [isDesktop, servicedata.length]);
   return (
-    <div className="w-full sm:py-0 lg:py-16 bg relative bg-gradient-to-r from-blue-600 via-blue-400 to-blue-200 shadow-none rounded-lg lg:shadow-[0_4px_10px_rgba(0,0,0,0.1)]">
+    <div className="w-full sm:py-0 lg:py-16 bg relative bg-gradient-to-r from-blue-500 to-purple-600 shadow-none rounded-lg lg:shadow-[0_4px_10px_rgba(0,0,0,0.1)]">
       <div className="sm:px-2 lg:px-12">
         {isDesktop ? (
           // **Desktop View with Swiper**
@@ -48,13 +48,13 @@ const DentalCare = () => {
                     <h3 className="text-3xl font-bold text-white">
                       Dental Services
                     </h3>
-                    <h1 className="text-3xl md:text-5xl font-bold text-white">
+                    <h1 className="text-4xl md:text-5xl font-bold text-white">
                       {service.title}
                     </h1>
                     <p className="text-white text-lg md:text-xl font-serif">
                       {service.description}
                     </p>
-                    <button className="shadow-lg  border border-l-purple-50 text-white px-5 py-2 rounded-lg w-full md:w-auto">
+                    <button className="shadow-lg bg-white border border-l-purple-50 text-blue-500 font-bold px-5 py-2 rounded-lg w-full md:w-auto">
                       Book Appointment
                     </button>
                   </div>
@@ -63,21 +63,8 @@ const DentalCare = () => {
                       <img
                         src={img}
                         alt="Dentist Illustration"
-                        className="w-80 md:w-64"
+                        className="w-80 md:w-[300px]"
                       />
-                      <div className="absolute top-1 left-[-130px] bg-white shadow-md p-2 rounded-md">
-                        <p className="text-gray-900 font-semibold">
-                          500+ Happy Customers
-                        </p>
-                      </div>
-                      <div className="absolute top-20 right-[-135px] bg-yellow-400 text-white shadow-md p-2 rounded-md">
-                        <p className="text-gray-900 font-semibold">
-                          2000+ Teeth Fixed
-                        </p>
-                      </div>
-                      <div className="absolute bottom-1 left-[-145px] bg-white p-2 shadow-md rounded-md text-gray-900 font-semibold">
-                        20+ Expert Dentists
-                      </div>
                     </div>
                   </div>
                 </div>

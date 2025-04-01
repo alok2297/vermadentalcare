@@ -3,7 +3,7 @@ import { Iconify } from "../Elements/Icon";
 
 export const ServiceSteps = () => {
   return (
-    <div className="bg-blue-600 text-white py-8 px-4 flex flex-col items-center">
+    <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-8 px-4 flex flex-col items-center">
       <div className="text-center mb-6">
         <h2 className="text-3xl font-semibold">How to get our service?</h2>
         <p className="text-lg mt-2">Just follow these simple steps</p>

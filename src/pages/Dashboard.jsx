@@ -33,7 +33,7 @@ import { DoctorSection } from '../components/Doctor/DoctorSection';
 
   const BrightenSmile = () => {
     return (
-      <div className="flex items-center justify-center bg-blue-600">
+      <div className="flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600">
         <div className="text-center text-white lg:max-w-[65%] sm:w-[90%] p-8 my-6">
           <h2 className="text-3xl font-semibold">
             Let Us Brighten <span className="font-bold">Your Smile!</span>

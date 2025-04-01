@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import { ScrollToTop } from '../Helper';
 import { useStorage } from './useStorage';
 import { Fallback } from '../components/Fallback';
+import { AppointmentBook } from '../pages/AppointmentBook';
 
 //lazy loaded Pages and Components
 const Dashboard = lazy(() => import('../pages/Dashboard'));
@@ -62,7 +63,7 @@ export const Routers = () => {
     },
     {
       path:"/appointment",
-      element:<AppointmentBooking/>,
+      element:<AppointmentBook/>,
       children:[],
       requireToken:false,
     },
