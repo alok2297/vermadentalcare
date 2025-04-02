@@ -2,10 +2,15 @@ import React from "react";
 import { Card, CardContent, CardMedia, Typography, useMediaQuery } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { useNavigate } from "react-router-dom";
 
 export const DentalServices = ({ data, orientation, cardHeightSmall,cardHeightBig }) => {
   const isSmallScreen = useMediaQuery("(max-width:600px)");
   const finalHeight = isSmallScreen ? (cardHeightBig || 250) : (cardHeightSmall || 300); 
+  const navigate = useNavigate();
+  function handleClick(){
+    navigate("/treatment-details");
+  }
   return (
     <Swiper
       spaceBetween={10}
@@ -16,6 +21,7 @@ export const DentalServices = ({ data, orientation, cardHeightSmall,cardHeightBi
       {data.map((service, index) => (
         <SwiperSlide className="my-2" key={index}>
           <Card
+            onClick={handleClick}
             sx={{
               display: "flex",
               flexDirection: isSmallScreen || orientation === "col" ? "column" : "row",

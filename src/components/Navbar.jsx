@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import logo from "../img/vermadentalcarelogo.png";
 import { HiMenu, HiX } from "react-icons/hi";
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { LastSegment, navbarItemsNotAuth } from '../Helper';
 import { navbarItems } from "../Helper";
 
 function NavbarCreation({ location, setIsOpen }) {
-  const navbarItemsCheck = localStorage.getItem("authToken") !== null ? navbarItems : navbarItemsNotAuth;
+  const auth = localStorage.getItem("authToken");
+  const navbarItemsCheck = auth !== null ? navbarItems : navbarItemsNotAuth;
+  const navigate = useNavigate();
+  function handleclick(){
+    localStorage.removeItem("authToken");
+    navigate("/login");
+  }
   
   return (
     <>
@@ -25,6 +31,7 @@ function NavbarCreation({ location, setIsOpen }) {
           </Link>
         </li>
       ))}
+      {auth&&<button onClick={handleclick} className='px-5 hover:text-blue-600'>Logout</button>}
     </>
   );
 }

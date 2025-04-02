@@ -4,6 +4,7 @@ import { ScrollToTop } from "../Helper";
 import { useStorage } from "./useStorage";
 import { Fallback } from "../components/Fallback";
 import { AppointmentBook } from "../pages/AppointmentBook";
+import Details from "../components/TreatmentDetail/Details";
 
 //lazy loaded Pages and Components
 const Dashboard = lazy(() => import("../pages/Dashboard"));
@@ -74,6 +75,12 @@ export const Routers = () => {
       children: [],
       requireToken: false,
     },
+    {
+      path:"/treatment-details",
+      element: <Details/>,
+      children: [],
+      requireToken: false
+    }
   ];
 
   useEffect(() => {
