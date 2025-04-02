@@ -19,7 +19,7 @@ export const HeroSection = () => {
   }
 
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between px-4 md:px-32 lg:py-8 sm:py-0 bg-white">
+    <section className="flex mt-[110px] flex-col md:flex-row items-center justify-between px-4 md:px-32 lg:py-8 sm:py-0 bg-white">
       <div className="max-w-lg text-center md:text-left">
         <AnimatePresence mode="wait">
           <motion.h1

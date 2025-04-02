@@ -1,10 +1,8 @@
 import React from "react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/footer";
-import background from "../img/backgroundd.jpg";
 import { FaTeeth, FaTeethOpen, FaTooth, FaSmile } from "react-icons/fa";
 import { GiTooth } from "react-icons/gi";
-import { BsTooth } from "react-icons/bs";
 
 const treatments = [
   { 
@@ -53,7 +51,7 @@ const treatments = [
 
 const Pricelist = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen bg-gray-50 flex flex-col mt-[90px] lg:mt-[120px]">
       {/* Hero Section */}
       <div
         className="relative w-full text-white text-center py-10 px-6"

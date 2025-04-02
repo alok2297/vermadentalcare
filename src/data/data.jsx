@@ -1,6 +1,3 @@
-import alignment from "../img/allignment.jpg";
-import brightsmile from "../img/brightsmile.jpg";
-import generalcare from "../img/generalcare.jpg";
 import profile from "../img/doc_profile.png";
 import img from "../img/HeroImage.png";
 export const videoData = [

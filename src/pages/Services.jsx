@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import { DentalServices } from '../components/Services/DentalServices';
-import { Navbar } from '../components/Navbar';
-import { Container } from '../components/Elements/Container';
-import { dentalServices } from '../data/data';
-import {servicedata} from "../data/data";
-import { useMediaQuery } from 'react-responsive';
-import { KeyFeature } from './Dashboard';
-import img from "../img/HeroImage.png"
-import { Footer } from '../components/footer';
-import background from "../img/backgroundd.jpg";
-import { Autoplay, Navigation } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useEffect, useState } from "react";
+import { DentalServices } from "../components/Services/DentalServices";
+import { Navbar } from "../components/Navbar";
+import { Container } from "../components/Elements/Container";
+import { dentalServices } from "../data/data";
+import { servicedata } from "../data/data";
+import { useMediaQuery } from "react-responsive";
+import { KeyFeature } from "./Dashboard";
+import img from "../img/HeroImage.png";
+import { Footer } from "../components/footer";
+import { Autoplay, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FaCalendarAlt, FaTooth } from "react-icons/fa";
 
 const DentalCare = () => {
   const isDesktop = useMediaQuery({ query: "(min-width: 1025px)" });
@@ -28,10 +28,9 @@ const DentalCare = () => {
     }
   }, [isDesktop, servicedata.length]);
   return (
-    <div className="w-full sm:py-0 lg:py-16 bg relative bg-gradient-to-r from-blue-500 to-purple-600 shadow-none rounded-lg lg:shadow-[0_4px_10px_rgba(0,0,0,0.1)]">
+    <div className="w-full mt-[110px] lg:mt-[120px] sm:py-0 lg:py-8 bg relative bg-gradient-to-r from-blue-500 to-purple-600 shadow-none rounded-lg lg:shadow-[0_4px_10px_rgba(0,0,0,0.1)]">
       <div className="sm:px-2 lg:px-12">
         {isDesktop ? (
-          // **Desktop View with Swiper**
           <Swiper
             modules={[Autoplay, Navigation]}
             spaceBetween={50}
@@ -43,27 +42,31 @@ const DentalCare = () => {
           >
             {servicedata.map((service, index) => (
               <SwiperSlide key={index}>
-                <div className="flex flex-col rounded-2xl lg:flex-row items-center justify-center relative">
-                  <div className="max-1/2 text-center md:text-left space-y-2">
-                    <h3 className="text-3xl font-bold text-white">
-                      Dental Services
-                    </h3>
+                <div className="flex flex-col h-[260px] rounded-2xl lg:flex-row items-center justify-center relative">
+                  <div className="max-1/2 text-center md:text-left space-y-4">
+                    <div className="flex items-center gap-2">
+                      <FaTooth className="text-xl text-blue-200" />
+                      <span className="text-sm font-semibold tracking-wider text-blue-100">
+                        VERMA DENTAL CARE
+                      </span>
+                    </div>
                     <h1 className="text-4xl md:text-5xl font-bold text-white">
                       {service.title}
                     </h1>
                     <p className="text-white text-lg md:text-xl font-serif">
                       {service.description}
                     </p>
-                    <button className="shadow-lg bg-white border border-l-purple-50 text-blue-500 font-bold px-5 py-2 rounded-lg w-full md:w-auto">
+                    <button className="flex items-center gap-3 bg-white text-blue-600 hover:bg-blue-50 px-6 py-2 rounded-lg font-medium shadow-lg transition-all hover:scale-105 w-fit">
+                      <FaCalendarAlt />
                       Book Appointment
                     </button>
                   </div>
                   <div className="lg:w-1/2 flex justify-center">
-                    <div className="relative mt-10 md:mt-0">
+                    <div className="relative  md:mt-0">
                       <img
                         src={img}
                         alt="Dentist Illustration"
-                        className="w-80 md:w-[300px]"
+                        className="w-80 md:w-[240px]"
                       />
                     </div>
                   </div>
@@ -111,25 +114,33 @@ const DentalCare = () => {
 };
 
 const Services = () => {
-
   return (
     <div>
       <Navbar />
       <Container>
-        <div className="container mx-auto px-4 py-1">
+        <div className="container mx-auto px-4 my-3">
           <DentalCare />
         </div>
       </Container>
       <Container>
         <div className="container mx-auto px-4">
-          <KeyFeature right="Dental Service" mostright="Overview"/>
-          <DentalServices data={dentalServices} orientation="row" cardHeightSmall={200}  cardHeightBig={300}/>
+          <KeyFeature right="Dental Service" mostright="Overview" />
+          <DentalServices
+            data={dentalServices}
+            orientation="row"
+            cardHeightSmall={200}
+            cardHeightBig={300}
+          />
           <div className="mt-6"></div>
-          <KeyFeature right="Casmetic" mostright="Procedures"/>
-          <DentalServices data={dentalServices} orientation="col"  cardHeightBig={300} />
+          <KeyFeature right="Casmetic" mostright="Procedures" />
+          <DentalServices
+            data={dentalServices}
+            orientation="col"
+            cardHeightBig={300}
+          />
         </div>
       </Container>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

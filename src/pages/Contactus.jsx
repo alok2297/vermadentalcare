@@ -4,7 +4,7 @@ import { Footer } from "../components/footer";
 
 function Contact() {
   return (
-    <div className="flex items-center justify-center p-6">
+    <div className="flex items-center justify-center p-6 mt-[90px] lg:mt-[120px]">
       <div className="max-w-4xl w-full bg-white shadow-none lg:shadow-xl rounded-2xl p-8 ">
         <h2 className="text-3xl font-bold text-blue-600 text-center">
           Contact Us
@@ -77,4 +77,4 @@ const ContactUs = () => {
     </div>
   );
 };
-export default Contact;
+export default ContactUs;

@@ -5,6 +5,7 @@ export const useStorage = (key) => {
     useEffect(() => {
       const handleStorageChange = () => {
         setStorageValue(localStorage.getItem(key));
+        console.log(storageValue);
         if (!localStorage.getItem(key)) {
           window.location.href = "/login";
         }

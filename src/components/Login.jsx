@@ -8,7 +8,7 @@ export const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   
   return (
-    <div className="flex bg-gray-50">
+    <div className="flex bg-gray-50 mt-[90px] lg:mt-[116px]">
       {/* Left Side - Dental Image */}
       <div className="hidden lg:block lg:w-1/2 bg-gray-100 relative">
         <img 

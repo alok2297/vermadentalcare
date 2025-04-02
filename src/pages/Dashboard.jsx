@@ -14,7 +14,7 @@ import { DoctorSection } from '../components/Doctor/DoctorSection';
 
     const isDesktop = useMediaQuery({ query: '(min-width: 1025px)' });
     return (
-      <div className="mt-5 flex items-center justify-between border-b border-gray-300 pb-2">
+      <div className="mt-2 flex items-center justify-between border-b border-gray-300 pb-2">
         {isDesktop && (
           <div className="flex flex-col">
             <span className="text-2xl font-medium">{props?.left}</span>

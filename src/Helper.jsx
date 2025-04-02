@@ -11,7 +11,15 @@ export const navbarItems = [
     { to: '/dentistry', label: 'Dentistry' },
     { to: '/myappointment', label: 'My Appointments' },
     { to: '/pricing', label: 'Pricing' },
-    {to: '/login', label: 'Login/Signup'}
+    { to: "/login", label: "logout" },
+];
+
+export const navbarItemsNotAuth = [
+  { to: "/", label: "Home" },
+  { to: "/services", label: "Services" },
+  { to: "/dentistry", label: "Dentistry" },
+  { to: "/pricing", label: "Pricing" },
+  { to: "/login", label: "Login/Signup" },
 ];
 
 

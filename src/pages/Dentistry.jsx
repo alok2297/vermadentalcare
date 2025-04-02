@@ -36,7 +36,7 @@ export const DentistryPage = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 mt-[90px] lg:[110px]">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-16 px-4 text-center">
         <div className="max-w-4xl mx-auto">

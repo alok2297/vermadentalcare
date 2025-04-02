@@ -75,7 +75,7 @@ const MyAppointments = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Navbar />
-      <div className="flex-grow max-w-6xl mx-auto p-4 lg:p-6 w-full">
+      <div className="flex-grow mt-[90px] lg:mt-[120px]  max-w-6xl mx-auto p-4 lg:p-6 w-full">
         {/* Breadcrumbs */}
         <Breadcrumbs
           links={[
