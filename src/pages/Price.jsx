@@ -55,12 +55,12 @@ const Pricelist = () => {
       {/* Hero Section */}
       <div
         className="relative w-full text-white text-center py-10 px-6"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6)`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed"
-        }}
+        // style={{
+        //   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6)`,
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        //   backgroundAttachment: "fixed"
+        // }}
       >
         <div className="max-w-4xl mx-auto">
           <h1 className="relative text-4xl text-blue-500 md:text-5xl font-bold mb-5 animate-fade-in">

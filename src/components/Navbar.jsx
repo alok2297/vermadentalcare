@@ -44,7 +44,7 @@ export const Navbar = () => {
   return (
     <div className="fixed w-full top-0 left-0 z-50 bg-white shadow-sm">
       <div className={`${lastSegment !== "login" ? "border-b border-gray-300" : ""}`}>
-        <nav className="bg-white pr-9 flex justify-between items-center md:px-0 py-2 max-w-7xl mx-auto">
+        <nav className="bg-white pr-9 flex justify-between items-center md:px-0 py-2 w-full mx-auto">
           <Link to="/">
             <img 
               className="w-[150px] h-[75px] object-cover md:w-[220px] md:h-[100px]" 
