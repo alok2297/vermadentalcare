@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import hero2 from "../img/HeroImage.png"
+import heroIcon from "../img/heroIcon.png"
 import { motion, AnimatePresence } from 'framer-motion';
 import {texts} from "../data/data"
 import { useNavigate } from 'react-router-dom';
@@ -49,8 +50,8 @@ export const HeroSection = () => {
       </div>
 
       <div className="relative mt-4 md:mt-0 flex justify-center">
-        <div className="relative w-60 md:w-80 h-60 md:h-80">
-              <img src={hero2}
+        <div className="relative w-60 md:w-[340px] h-60 md:h-[340px]">
+              <img src={heroIcon}
               alt="Dentist Illustration"
               className="w-full h-full object-contain"/>
         </div>
